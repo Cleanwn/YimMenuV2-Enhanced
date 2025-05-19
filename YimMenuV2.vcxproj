@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7134EBD9-DD9E-9F50-26DD-50F692867DA5}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>YimMenuV2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\int\$(ProjectName)\</IntDir>
+    <TargetName>YimMenuV2</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>common.hpp</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;IMGUI_DEFINE_MATH_OPERATORS;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)include\json-src\single_include;$(SolutionDir)include\imgui-src;$(SolutionDir)include\minhook-src\src\hde;$(SolutionDir)include\minhook-src\include;$(SolutionDir)include\asynclogger-src\src;$(SolutionDir)include\asynclogger-src\include;$(SolutionDir)include\fmtlib-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>common.hpp</ForcedIncludeFiles>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>$(IntDir)%(RelativeDir)%(Filename).obj</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SolutionDir)lib\minhook.x64.lib;$(SolutionDir)lib\AsyncLogger.lib;$(SolutionDir)lib\imgui.lib;$(SolutionDir)lib\fmtlib.lib;dbghelp.lib;d3dcompiler.lib;dwmapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.hpp" />
+    <ClInclude Include="src\core\backend\FiberPool.hpp" />
+    <ClInclude Include="src\core\backend\PatternCache.hpp" />
+    <ClInclude Include="src\core\backend\ScriptMgr.hpp" />
+    <ClInclude Include="src\core\commands\BoolCommand.hpp" />
+    <ClInclude Include="src\core\commands\ColorCommand.hpp" />
+    <ClInclude Include="src\core\commands\Command.hpp" />
+    <ClInclude Include="src\core\commands\Commands.hpp" />
+    <ClInclude Include="src\core\commands\FloatCommand.hpp" />
+    <ClInclude Include="src\core\commands\HotkeySystem.hpp" />
+    <ClInclude Include="src\core\commands\IntCommand.hpp" />
+    <ClInclude Include="src\core\commands\ListCommand.hpp" />
+    <ClInclude Include="src\core\commands\LoopedCommand.hpp" />
+    <ClInclude Include="src\core\commands\StringCommand.hpp" />
+    <ClInclude Include="src\core\commands\Vector3Command.hpp" />
+    <ClInclude Include="src\core\filemgr\BaseObj.hpp" />
+    <ClInclude Include="src\core\filemgr\CacheFile.hpp" />
+    <ClInclude Include="src\core\filemgr\File.hpp" />
+    <ClInclude Include="src\core\filemgr\FileMgr.hpp" />
+    <ClInclude Include="src\core\filemgr\Folder.hpp" />
+    <ClInclude Include="src\core\frontend\Notifications.hpp" />
+    <ClInclude Include="src\core\frontend\manager\Category.hpp" />
+    <ClInclude Include="src\core\frontend\manager\Submenu.hpp" />
+    <ClInclude Include="src\core\frontend\manager\UIItem.hpp" />
+    <ClInclude Include="src\core\frontend\manager\UIManager.hpp" />
+    <ClInclude Include="src\core\frontend\widgets\imgui_bitfield.hpp" />
+    <ClInclude Include="src\core\frontend\widgets\imgui_colors.h" />
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_offset_rect.hpp" />
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle.hpp" />
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle_math.hpp" />
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle_palette.hpp" />
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle_presets.hpp" />
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle_renderer.hpp" />
+    <ClInclude Include="src\core\hooking\BaseHook.hpp" />
+    <ClInclude Include="src\core\hooking\CallHook.hpp" />
+    <ClInclude Include="src\core\hooking\DetourHook.hpp" />
+    <ClInclude Include="src\core\hooking\Hooking.hpp" />
+    <ClInclude Include="src\core\hooking\IATHook.hpp" />
+    <ClInclude Include="src\core\hooking\MinHook.hpp" />
+    <ClInclude Include="src\core\hooking\VMTHook.hpp" />
+    <ClInclude Include="src\core\logger\ExceptionHandler.hpp" />
+    <ClInclude Include="src\core\logger\LogColor.hpp" />
+    <ClInclude Include="src\core\logger\LogHelper.hpp" />
+    <ClInclude Include="src\core\logger\LogSink.hpp" />
+    <ClInclude Include="src\core\logger\StackTrace.hpp" />
+    <ClInclude Include="src\core\memory\BytePatches.hpp" />
+    <ClInclude Include="src\core\memory\Module.hpp" />
+    <ClInclude Include="src\core\memory\ModuleMgr.hpp" />
+    <ClInclude Include="src\core\memory\Pattern.hpp" />
+    <ClInclude Include="src\core\memory\PatternHash.hpp" />
+    <ClInclude Include="src\core\memory\PatternScanner.hpp" />
+    <ClInclude Include="src\core\memory\PointerCalculator.hpp" />
+    <ClInclude Include="src\core\renderer\Renderer.hpp" />
+    <ClInclude Include="src\core\settings\IStateSerializer.hpp" />
+    <ClInclude Include="src\core\settings\Settings.hpp" />
+    <ClInclude Include="src\core\util\Joaat.hpp" />
+    <ClInclude Include="src\core\util\Math.hpp" />
+    <ClInclude Include="src\core\util\RateLimiter.hpp" />
+    <ClInclude Include="src\core\util\StrToHex.hpp" />
+    <ClInclude Include="src\game\backend\AnticheatBypass.hpp" />
+    <ClInclude Include="src\game\backend\NativeHooks.hpp" />
+    <ClInclude Include="src\game\backend\NodeHooks.hpp" />
+    <ClInclude Include="src\game\backend\PlayerData.hpp" />
+    <ClInclude Include="src\game\backend\Players.hpp" />
+    <ClInclude Include="src\game\backend\SavedLocations.hpp" />
+    <ClInclude Include="src\game\backend\SavedPlayerData.hpp" />
+    <ClInclude Include="src\game\backend\SavedPlayers.hpp" />
+    <ClInclude Include="src\game\backend\SavedVariables.hpp" />
+    <ClInclude Include="src\game\backend\ScriptPatches.hpp" />
+    <ClInclude Include="src\game\backend\ScriptPointers.hpp" />
+    <ClInclude Include="src\game\backend\Self.hpp" />
+    <ClInclude Include="src\game\backend\Tunables.hpp" />
+    <ClInclude Include="src\game\commands\PlayerCommand.hpp" />
+    <ClInclude Include="src\game\features\recovery\GiveVehicleReward.hpp" />
+    <ClInclude Include="src\game\frontend\ChatDisplay.hpp" />
+    <ClInclude Include="src\game\frontend\ESP.hpp" />
+    <ClInclude Include="src\game\frontend\GUI.hpp" />
+    <ClInclude Include="src\game\frontend\Menu.hpp" />
+    <ClInclude Include="src\game\frontend\Overlay.hpp" />
+    <ClInclude Include="src\game\frontend\fonts\Fonts.hpp" />
+    <ClInclude Include="src\game\frontend\items\Items.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Debug.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Debug\DrawVariable.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Debug\Globals.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Debug\Locals.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Debug\Misc.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Debug\Scripts.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Network.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Network\RandomEvents.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Network\SavedPlayers.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\OutfitEditor.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Player\Info.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Player\Kick.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Player\Toxic.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Player\Troll.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Players.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\ApartmentHeist.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\CayoPericoHeist.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\DiamondCasinoHeist.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\DoomsdayHeist.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\HeistModifier.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\StatEditor.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Transactions.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Self.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Settings.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Teleport.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\World.hpp" />
+    <ClInclude Include="src\game\gta\data\ScriptNames.hpp" />
+    <ClInclude Include="src\game\gta\data\StackSizes.hpp" />
+    <ClInclude Include="src\game\gta\Entity.hpp" />
+    <ClInclude Include="src\game\gta\Natives.hpp" />
+    <ClInclude Include="src\game\gta\Network.hpp" />
+    <ClInclude Include="src\game\gta\Nodes.hpp" />
+    <ClInclude Include="src\game\gta\Object.hpp" />
+    <ClInclude Include="src\game\gta\Packet.hpp" />
+    <ClInclude Include="src\game\gta\Ped.hpp" />
+    <ClInclude Include="src\game\gta\Player.hpp" />
+    <ClInclude Include="src\game\gta\Pools.hpp" />
+    <ClInclude Include="src\game\gta\ScriptData.hpp" />
+    <ClInclude Include="src\game\gta\ScriptFunction.hpp" />
+    <ClInclude Include="src\game\gta\ScriptGlobal.hpp" />
+    <ClInclude Include="src\game\gta\ScriptLocal.hpp" />
+    <ClInclude Include="src\game\gta\ScriptPointer.hpp" />
+    <ClInclude Include="src\game\gta\Scripts.hpp" />
+    <ClInclude Include="src\game\gta\Stats.hpp" />
+    <ClInclude Include="src\game\gta\Vehicle.hpp" />
+    <ClInclude Include="src\game\gta\data\IPL.hpp" />
+    <ClInclude Include="src\game\gta\data\RandomEvents.hpp" />
+    <ClInclude Include="src\game\gta\data\VehicleValues.hpp" />
+    <ClInclude Include="src\game\gta\data\Weapons.hpp" />
+    <ClInclude Include="src\game\gta\invoker\Crossmap.hpp" />
+    <ClInclude Include="src\game\gta\invoker\Invoker.hpp" />
+    <ClInclude Include="src\game\hooks\Hooks.hpp" />
+    <ClInclude Include="src\game\pointers\Pointers.hpp" />
+    <ClInclude Include="src\types\entity\CDynamicEntity.hpp" />
+    <ClInclude Include="src\types\entity\CEntity.hpp" />
+    <ClInclude Include="src\types\entity\fwEntity.hpp" />
+    <ClInclude Include="src\types\fx\ExplosionType.hpp" />
+    <ClInclude Include="src\types\netshop\CNetShopTransaction.hpp" />
+    <ClInclude Include="src\types\netshop\netCatalogBaseItem.hpp" />
+    <ClInclude Include="src\types\network\CNetGamePlayer.hpp" />
+    <ClInclude Include="src\types\network\CNetworkPlayerMgr.hpp" />
+    <ClInclude Include="src\types\network\netAddress.hpp" />
+    <ClInclude Include="src\types\network\netArrayHandler.hpp" />
+    <ClInclude Include="src\types\network\netArrayHandlerBase.hpp" />
+    <ClInclude Include="src\types\network\netArrayIdentifierBase.hpp" />
+    <ClInclude Include="src\types\network\netArrayMgr.hpp" />
+    <ClInclude Include="src\types\network\netEvent.hpp" />
+    <ClInclude Include="src\types\network\netGameEvent.hpp" />
+    <ClInclude Include="src\types\network\netMessage.hpp" />
+    <ClInclude Include="src\types\network\netObject.hpp" />
+    <ClInclude Include="src\types\network\netObjectMgrBase.hpp" />
+    <ClInclude Include="src\types\network\netPlayer.hpp" />
+    <ClInclude Include="src\types\network\netPlayerMgrBase.hpp" />
+    <ClInclude Include="src\types\network\netSocketAddress.hpp" />
+    <ClInclude Include="src\types\network\rlGamerHandle.hpp" />
+    <ClInclude Include="src\types\network\rlGamerInfo.hpp" />
+    <ClInclude Include="src\types\network\rlGamerInfoBase.hpp" />
+    <ClInclude Include="src\types\network\rlSessionByGamerHandleTaskResult.hpp" />
+    <ClInclude Include="src\types\network\rlSessionInfo.hpp" />
+    <ClInclude Include="src\types\network\rlTaskStatus.hpp" />
+    <ClInclude Include="src\types\network\sync\CProjectBaseSyncDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\NodeCommonDataOperations.hpp" />
+    <ClInclude Include="src\types\network\sync\netSyncDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\netSyncNodeBase.hpp" />
+    <ClInclude Include="src\types\network\sync\netSyncTree.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\CPedComponents.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\automobile\CAutomobileCreationNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\door\CDoorCreationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\door\CDoorMovementDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\door\CDoorScriptGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\door\CDoorScriptInfoDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\dynamic_entity\CDynamicEntityGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\entity\CEntityOrientationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\entity\CEntityScriptGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\entity\CEntityScriptInfoDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\heli\CHeliControlDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\heli\CHeliHealthDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\object\CObjectCreationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedAIDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedAppearanceDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedAttachDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedComponentReservationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedCreationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedHealthDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedInventoryDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedMovementDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedMovementGroupDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedOrientationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedScriptCreationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedTaskSequenceDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedTaskSpecificDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedTaskTreeDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalAngVelocityDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalAttachDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalHealthDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalMigrationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalScriptGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalScriptMigrationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalVelocityDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\pickup\CPickupCreationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\pickup_placement\CPickupPlacementCreationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerAmbientModelStreamingNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerAppearanceDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerCameraDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerCreationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerExtendedGameStateNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerGamerDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerPedGroupDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerSectorPosNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerWantedAndLOSDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\proximity_migrateable\CGlobalFlagsDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\proximity_migrateable\CMigrationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\proximity_migrateable\CSectorDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\proximity_migrateable\CSectorPositionDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\task\CClonedGeneralSweepInfo.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\task\ClonedTakeOffPedVariationInfo.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\train\CTrainGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleComponentReservationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleControlDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleCreationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleDamageStatusDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleGadgetDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleGameStateDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleHealthDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleProximityMigrationDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleSteeringDataNode.hpp" />
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleTaskDataNode.hpp" />
+    <ClInclude Include="src\types\pad\ControllerInputs.hpp" />
+    <ClInclude Include="src\types\ped\CPedFactory.hpp" />
+    <ClInclude Include="src\types\ped\PedConfigFlag.hpp" />
+    <ClInclude Include="src\types\rage\PoolEncryption.hpp" />
+    <ClInclude Include="src\types\rage\RTTI.hpp" />
+    <ClInclude Include="src\types\rage\atArray.hpp" />
+    <ClInclude Include="src\types\rage\datBase.hpp" />
+    <ClInclude Include="src\types\rage\datBitBuffer.hpp" />
+    <ClInclude Include="src\types\rage\fwBasePool.hpp" />
+    <ClInclude Include="src\types\rage\fwExtensibleBase.hpp" />
+    <ClInclude Include="src\types\rage\fwExtension.hpp" />
+    <ClInclude Include="src\types\rage\fwExtensionContainer.hpp" />
+    <ClInclude Include="src\types\rage\fwRefAwareBase.hpp" />
+    <ClInclude Include="src\types\rage\fwRefAwareBaseImpl.hpp" />
+    <ClInclude Include="src\types\rage\pgBase.hpp" />
+    <ClInclude Include="src\types\rage\sysMemAllocator.hpp" />
+    <ClInclude Include="src\types\rage\tlsContext.hpp" />
+    <ClInclude Include="src\types\rage\vector.hpp" />
+    <ClInclude Include="src\types\script\CGameScriptHandler.hpp" />
+    <ClInclude Include="src\types\script\CGameScriptHandlerNetComponent.hpp" />
+    <ClInclude Include="src\types\script\CGameScriptId.hpp" />
+    <ClInclude Include="src\types\script\CGameScriptObjInfo.hpp" />
+    <ClInclude Include="src\types\script\GtaThread.hpp" />
+    <ClInclude Include="src\types\script\HudColor.hpp" />
+    <ClInclude Include="src\types\script\MPScriptData.hpp" />
+    <ClInclude Include="src\types\script\ScriptEvent.hpp" />
+    <ClInclude Include="src\types\script\Timer.hpp" />
+    <ClInclude Include="src\types\script\globals\GPBD_FM.hpp" />
+    <ClInclude Include="src\types\script\globals\GPBD_FM_2.hpp" />
+    <ClInclude Include="src\types\script\globals\GPBD_FM_3.hpp" />
+    <ClInclude Include="src\types\script\globals\GPBD_Kicking.hpp" />
+    <ClInclude Include="src\types\script\globals\GPBD_MissionName.hpp" />
+    <ClInclude Include="src\types\script\globals\GSBD.hpp" />
+    <ClInclude Include="src\types\script\globals\GSBD_BlockB.hpp" />
+    <ClInclude Include="src\types\script\globals\GSBD_FM.hpp" />
+    <ClInclude Include="src\types\script\globals\GSBD_FM_Events.hpp" />
+    <ClInclude Include="src\types\script\globals\GSBD_Kicking.hpp" />
+    <ClInclude Include="src\types\script\globals\GSBD_PropertyInstances.hpp" />
+    <ClInclude Include="src\types\script\globals\GSBD_RandomEvents.hpp" />
+    <ClInclude Include="src\types\script\globals\GlobalPlayerBD.hpp" />
+    <ClInclude Include="src\types\script\globals\g_AMC_playerBD.hpp" />
+    <ClInclude Include="src\types\script\locals\FMRandomEvents.hpp" />
+    <ClInclude Include="src\types\script\locals\VehicleRewardData.hpp" />
+    <ClInclude Include="src\types\script\scrNativeHandler.hpp" />
+    <ClInclude Include="src\types\script\scrProgram.hpp" />
+    <ClInclude Include="src\types\script\scrThread.hpp" />
+    <ClInclude Include="src\types\script\scrVector.hpp" />
+    <ClInclude Include="src\types\script\scriptHandler.hpp" />
+    <ClInclude Include="src\types\script\scriptHandlerNetComponent.hpp" />
+    <ClInclude Include="src\types\script\scriptId.hpp" />
+    <ClInclude Include="src\types\script\scriptIdBase.hpp" />
+    <ClInclude Include="src\types\script\types.hpp" />
+    <ClInclude Include="src\types\socialclub\rlGetAvatarsContext.hpp" />
+    <ClInclude Include="src\types\socialclub\rlQueryAccountsResult.hpp" />
+    <ClInclude Include="src\types\socialclub\rlQueryPresenceAttributesContext.hpp" />
+    <ClInclude Include="src\types\socialclub\rlScGamerHandle.hpp" />
+    <ClInclude Include="src\types\socialclub\rlScTaskStatus.hpp" />
+    <ClInclude Include="src\types\stats\CStatsMgr.hpp" />
+    <ClInclude Include="src\types\stats\sStatData.hpp" />
+    <ClInclude Include="src\types\vehicle\fwVehiclePool.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\common.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\core\backend\FiberPool.cpp" />
+    <ClCompile Include="src\core\backend\PatternCache.cpp" />
+    <ClCompile Include="src\core\backend\ScriptMgr.cpp" />
+    <ClCompile Include="src\core\commands\BoolCommand.cpp" />
+    <ClCompile Include="src\core\commands\ColorCommand.cpp" />
+    <ClCompile Include="src\core\commands\Command.cpp" />
+    <ClCompile Include="src\core\commands\Commands.cpp" />
+    <ClCompile Include="src\core\commands\FloatCommand.cpp" />
+    <ClCompile Include="src\core\commands\HotkeySystem.cpp" />
+    <ClCompile Include="src\core\commands\IntCommand.cpp" />
+    <ClCompile Include="src\core\commands\ListCommand.cpp" />
+    <ClCompile Include="src\core\commands\LoopedCommand.cpp" />
+    <ClCompile Include="src\core\commands\StringCommand.cpp" />
+    <ClCompile Include="src\core\commands\Vector3Command.cpp" />
+    <ClCompile Include="src\core\filemgr\BaseObj.cpp" />
+    <ClCompile Include="src\core\filemgr\CacheFile.cpp" />
+    <ClCompile Include="src\core\filemgr\File.cpp" />
+    <ClCompile Include="src\core\filemgr\FileMgr.cpp" />
+    <ClCompile Include="src\core\filemgr\Folder.cpp" />
+    <ClCompile Include="src\core\frontend\Notifications.cpp" />
+    <ClCompile Include="src\core\frontend\manager\Category.cpp" />
+    <ClCompile Include="src\core\frontend\manager\Submenu.cpp" />
+    <ClCompile Include="src\core\frontend\manager\UIManager.cpp" />
+    <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle.cpp" />
+    <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle_palette.cpp" />
+    <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle_presets.cpp" />
+    <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle_renderer.cpp" />
+    <ClCompile Include="src\core\hooking\BaseHook.cpp" />
+    <ClCompile Include="src\core\hooking\CallHook.cpp" />
+    <ClCompile Include="src\core\hooking\Hooking.cpp" />
+    <ClCompile Include="src\core\logger\ExceptionHandler.cpp" />
+    <ClCompile Include="src\core\logger\LogHelper.cpp" />
+    <ClCompile Include="src\core\logger\LogSink.cpp" />
+    <ClCompile Include="src\core\logger\StackTrace.cpp" />
+    <ClCompile Include="src\core\memory\BytePatches.cpp" />
+    <ClCompile Include="src\core\memory\Module.cpp" />
+    <ClCompile Include="src\core\memory\ModuleMgr.cpp" />
+    <ClCompile Include="src\core\memory\Pattern.cpp" />
+    <ClCompile Include="src\core\memory\PatternScanner.cpp" />
+    <ClCompile Include="src\core\renderer\Renderer.cpp" />
+    <ClCompile Include="src\core\settings\IStateSerializer.cpp" />
+    <ClCompile Include="src\core\settings\Settings.cpp" />
+    <ClCompile Include="src\game\backend\AnticheatBypass.cpp" />
+    <ClCompile Include="src\game\backend\NativeHooks.cpp" />
+    <ClCompile Include="src\game\backend\NodeHooks.cpp" />
+    <ClCompile Include="src\game\backend\Players.cpp" />
+    <ClCompile Include="src\game\backend\SavedLocations.cpp" />
+    <ClCompile Include="src\game\backend\SavedPlayerData.cpp" />
+    <ClCompile Include="src\game\backend\SavedPlayers.cpp" />
+    <ClCompile Include="src\game\backend\SavedVariables.cpp" />
+    <ClCompile Include="src\game\backend\ScriptPatches.cpp" />
+    <ClCompile Include="src\game\backend\ScriptPointers.cpp" />
+    <ClCompile Include="src\game\backend\Self.cpp" />
+    <ClCompile Include="src\game\backend\Tunables.cpp" />
+    <ClCompile Include="src\game\commands\PlayerCommand.cpp" />
+    <ClCompile Include="src\game\features\network\BypassCasinoRestrictions.cpp" />
+    <ClCompile Include="src\game\features\network\CheaterPool.cpp" />
+    <ClCompile Include="src\game\features\network\DisableDeathBarriers.cpp" />
+    <ClCompile Include="src\game\features\network\FastJoin.cpp" />
+    <ClCompile Include="src\game\features\network\ForceScriptHost.cpp" />
+    <ClCompile Include="src\game\features\network\HarassPlayers.cpp" />
+    <ClCompile Include="src\game\features\network\JoinSession.cpp" />
+    <ClCompile Include="src\game\features\network\PauseGame.cpp" />
+    <ClCompile Include="src\game\features\network\SpamKillfeed.cpp" />
+    <ClCompile Include="src\game\features\network\SpoofMatchmakingRegion.cpp" />
+    <ClCompile Include="src\game\features\players\info\Spectate.cpp" />
+    <ClCompile Include="src\game\features\players\kick\FreemodeStateKick.cpp" />
+    <ClCompile Include="src\game\features\players\kick\HostKick.cpp" />
+    <ClCompile Include="src\game\features\players\kick\NullFunctionKick.cpp" />
+    <ClCompile Include="src\game\features\players\kick\ScriptHostKick.cpp" />
+    <ClCompile Include="src\game\features\players\teleport\Bring.cpp" />
+    <ClCompile Include="src\game\features\players\teleport\TeleportToCoord.cpp" />
+    <ClCompile Include="src\game\features\players\teleport\TeleportToPlayer.cpp" />
+    <ClCompile Include="src\game\features\players\toxic\CeoKick.cpp" />
+    <ClCompile Include="src\game\features\players\toxic\Explode.cpp" />
+    <ClCompile Include="src\game\features\players\toxic\Kill.cpp" />
+    <ClCompile Include="src\game\features\players\toxic\KillLoopExploit.cpp" />
+    <ClCompile Include="src\game\features\players\troll\DeleteVehicle.cpp" />
+    <ClCompile Include="src\game\features\players\troll\SendSext.cpp" />
+    <ClCompile Include="src\game\features\players\troll\SetBounty.cpp" />
+    <ClCompile Include="src\game\features\recovery\DLCVehicles.cpp" />
+    <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp" />
+    <ClCompile Include="src\game\features\recovery\GiveVehicleReward.cpp" />
+    <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp" />
+    <ClCompile Include="src\game\features\recovery\Heist\CayoPericoHeist.cpp" />
+    <ClCompile Include="src\game\features\recovery\Heist\DiamondCasinoHeist.cpp" />
+    <ClCompile Include="src\game\features\recovery\Heist\DoomsdayHeist.cpp" />
+    <ClCompile Include="src\game\features\recovery\PlayAllMissionsSolo.cpp" />
+    <ClCompile Include="src\game\features\self\Aimbot.cpp" />
+    <ClCompile Include="src\game\features\self\ClearDamage.cpp" />
+    <ClCompile Include="src\game\features\self\DisableActionMode.cpp" />
+    <ClCompile Include="src\game\features\self\ExplosiveAmmo.cpp" />
+    <ClCompile Include="src\game\features\self\FillInventory.cpp" />
+    <ClCompile Include="src\game\features\self\FormatMoney.cpp" />
+    <ClCompile Include="src\game\features\self\Freecam.cpp" />
+    <ClCompile Include="src\game\features\self\GiveAllWeapons.cpp" />
+    <ClCompile Include="src\game\features\self\Godmode.cpp" />
+    <ClCompile Include="src\game\features\self\Heal.cpp" />
+    <ClCompile Include="src\game\features\self\InfiniteAmmo.cpp" />
+    <ClCompile Include="src\game\features\self\InfiniteClip.cpp" />
+    <ClCompile Include="src\game\features\self\InfiniteParachutes.cpp" />
+    <ClCompile Include="src\game\features\self\Invis.cpp" />
+    <ClCompile Include="src\game\features\self\KeepPlayerClean.cpp" />
+    <ClCompile Include="src\game\features\self\MobileRadio.cpp" />
+    <ClCompile Include="src\game\features\self\NoIdleKick.cpp" />
+    <ClCompile Include="src\game\features\self\NoRagdoll.cpp" />
+    <ClCompile Include="src\game\features\self\Noclip.cpp" />
+    <ClCompile Include="src\game\features\self\OffTheRadar.cpp" />
+    <ClCompile Include="src\game\features\self\OpenWardrobe.cpp" />
+    <ClCompile Include="src\game\features\self\RapidFire.cpp" />
+    <ClCompile Include="src\game\features\self\SkipConversation.cpp" />
+    <ClCompile Include="src\game\features\self\SkipCutscene.cpp" />
+    <ClCompile Include="src\game\features\self\StandOnVehicles.cpp" />
+    <ClCompile Include="src\game\features\self\Suicide.cpp" />
+    <ClCompile Include="src\game\features\self\SuperJump.cpp" />
+    <ClCompile Include="src\game\features\self\SuperRun.cpp" />
+    <ClCompile Include="src\game\features\self\UnlimitedOxygen.cpp" />
+    <ClCompile Include="src\game\features\self\Wanted.cpp" />
+    <ClCompile Include="src\game\features\system\Chat.cpp" />
+    <ClCompile Include="src\game\features\system\DespawnBypass.cpp" />
+    <ClCompile Include="src\game\features\system\LSCCustomsBypass.cpp" />
+    <ClCompile Include="src\game\features\teleport\TpToWaypoint.cpp" />
+    <ClCompile Include="src\game\features\vehicle\AllowHatsInVehicles.cpp" />
+    <ClCompile Include="src\game\features\vehicle\EnterLast.cpp" />
+    <ClCompile Include="src\game\features\vehicle\Fix.cpp" />
+    <ClCompile Include="src\game\features\vehicle\Godmode.cpp">
+      <ObjectFileName>$(IntDir)\Godmode1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\HornBoost.cpp" />
+    <ClCompile Include="src\game\features\vehicle\KeepFixed.cpp" />
+    <ClCompile Include="src\game\features\vehicle\RocketBoost.cpp" />
+    <ClCompile Include="src\game\features\vehicle\Seatbelt.cpp" />
+    <ClCompile Include="src\game\features\vehicle\Spawn.cpp" />
+    <ClCompile Include="src\game\features\vehicle\Speedometer.cpp" />
+    <ClCompile Include="src\game\features\world\Bring.cpp">
+      <ObjectFileName>$(IntDir)\Bring1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\CopsDispatch.cpp" />
+    <ClCompile Include="src\game\features\world\Delete.cpp" />
+    <ClCompile Include="src\game\features\world\IPLManager.cpp" />
+    <ClCompile Include="src\game\features\world\Kill.cpp">
+      <ObjectFileName>$(IntDir)\Kill1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\Pedsignore.cpp" />
+    <ClCompile Include="src\game\features\world\RiotMode.cpp" />
+    <ClCompile Include="src\game\features\world\Weather.cpp" />
+    <ClCompile Include="src\game\frontend\ChatDisplay.cpp" />
+    <ClCompile Include="src\game\frontend\ESP.cpp" />
+    <ClCompile Include="src\game\frontend\GUI.cpp" />
+    <ClCompile Include="src\game\frontend\Menu.cpp" />
+    <ClCompile Include="src\game\frontend\Overlay.cpp" />
+    <ClCompile Include="src\game\frontend\fonts\MainFont.cpp" />
+    <ClCompile Include="src\game\frontend\items\BoolCommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\Button.cpp" />
+    <ClCompile Include="src\game\frontend\items\ColorCommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\CommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\ConditionalItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\FloatCommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\Group.cpp" />
+    <ClCompile Include="src\game\frontend\items\HotkeySetter.cpp" />
+    <ClCompile Include="src\game\frontend\items\ImGuiItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\InputTextWithHint.cpp" />
+    <ClCompile Include="src\game\frontend\items\IntCommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\ListCommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\PlayerCommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\StringCommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\TabItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\Vector3CommandItem.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Debug.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Debug\DrawVariable.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Debug\Globals.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Debug\Locals.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Debug\Misc.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Debug\Scripts.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Network.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Network\RandomEvents.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Network\SavedPlayers.cpp">
+      <ObjectFileName>$(IntDir)\SavedPlayers1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\OutfitEditor.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Player\Info.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Player\Kick.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Player\Toxic.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Player\Troll.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Players.cpp">
+      <ObjectFileName>$(IntDir)\Players1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\ApartmentHeist.cpp">
+      <ObjectFileName>$(IntDir)\ApartmentHeist1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\CayoPericoHeist.cpp">
+      <ObjectFileName>$(IntDir)\CayoPericoHeist1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\DiamondCasinoHeist.cpp">
+      <ObjectFileName>$(IntDir)\DiamondCasinoHeist1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\DoomsdayHeist.cpp">
+      <ObjectFileName>$(IntDir)\DoomsdayHeist1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\HeistModifier.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Recovery\StatEditor.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Transactions.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Self.cpp">
+      <ObjectFileName>$(IntDir)\Self1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Settings.cpp">
+      <ObjectFileName>$(IntDir)\Settings1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Teleport.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\World.cpp" />
+    <ClCompile Include="src\game\gta\Entity.cpp" />
+    <ClCompile Include="src\game\gta\Network.cpp">
+      <ObjectFileName>$(IntDir)\Network1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Nodes.cpp" />
+    <ClCompile Include="src\game\gta\Object.cpp" />
+    <ClCompile Include="src\game\gta\Packet.cpp" />
+    <ClCompile Include="src\game\gta\Ped.cpp" />
+    <ClCompile Include="src\game\gta\Player.cpp" />
+    <ClCompile Include="src\game\gta\Pools.cpp" />
+    <ClCompile Include="src\game\gta\ScriptData.cpp" />
+    <ClCompile Include="src\game\gta\ScriptFunction.cpp" />
+    <ClCompile Include="src\game\gta\ScriptGlobal.cpp" />
+    <ClCompile Include="src\game\gta\ScriptLocal.cpp" />
+    <ClCompile Include="src\game\gta\ScriptPointer.cpp" />
+    <ClCompile Include="src\game\gta\Scripts.cpp" />
+    <ClCompile Include="src\game\gta\Stats.cpp" />
+    <ClCompile Include="src\game\gta\Vehicle.cpp" />
+    <ClCompile Include="src\game\gta\invoker\Invoker.cpp" />
+    <ClCompile Include="src\game\hooks\Anticheat\GetThreadContext.cpp" />
+    <ClCompile Include="src\game\hooks\Anticheat\HttpStartRequest.cpp" />
+    <ClCompile Include="src\game\hooks\Anticheat\PrepareMetricForSending.cpp" />
+    <ClCompile Include="src\game\hooks\Anticheat\QueueDependency.cpp" />
+    <ClCompile Include="src\game\hooks\GUI\SwapChain.cpp" />
+    <ClCompile Include="src\game\hooks\GUI\Window.cpp" />
+    <ClCompile Include="src\game\hooks\Info\AssignPhysicalIndex.cpp" />
+    <ClCompile Include="src\game\hooks\Info\NetworkPlayerManagerShutdown.cpp" />
+    <ClCompile Include="src\game\hooks\Network\HandleNetGameEvent.cpp" />
+    <ClCompile Include="src\game\hooks\Network\HandleScriptedGameEvent.cpp" />
+    <ClCompile Include="src\game\hooks\Network\ReceiveNetMessage.cpp" />
+    <ClCompile Include="src\game\hooks\Script\InitNativeTables.cpp" />
+    <ClCompile Include="src\game\hooks\Script\RunScriptThreads.cpp" />
+    <ClCompile Include="src\game\hooks\Script\ScriptVM.cpp" />
+    <ClCompile Include="src\game\hooks\Spoofing\IsNodeInScope.cpp" />
+    <ClCompile Include="src\game\hooks\Spoofing\ShouldUseNodeCache.cpp" />
+    <ClCompile Include="src\game\hooks\Spoofing\WriteNetArrayData.cpp" />
+    <ClCompile Include="src\game\hooks\Spoofing\WriteNodeData.cpp" />
+    <ClCompile Include="src\game\hooks\Spoofing\WriteSyncTree.cpp" />
+    <ClCompile Include="src\game\pointers\Pointers.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\types\network\netGameEvent.cpp" />
+    <ClCompile Include="src\types\network\rlGamerHandle.cpp" />
+    <ClCompile Include="src\types\script\CGameScriptId.cpp" />
+    <ClCompile Include="src\types\script\ScriptEvent.cpp" />
+    <ClCompile Include="src\types\script\Timer.cpp" />
+    <ClCompile Include="src\types\script\globals\Globals.cpp">
+      <ObjectFileName>$(IntDir)\Globals1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\types\script\locals\Locals.cpp">
+      <ObjectFileName>$(IntDir)\Locals1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\types\script\scrThread.cpp" />
+    <ClCompile Include="src\types\stats\CStatsMgr.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

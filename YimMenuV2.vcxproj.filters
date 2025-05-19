@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{4E40957C-3A77-960D-E363-7C10CF79120F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\backend">
+      <UniqueIdentifier>{254D219D-11B0-B041-BA35-E9F7A6777CC4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\commands">
+      <UniqueIdentifier>{6FAFB17A-DB6F-2DB1-A4AA-762E102A728D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\filemgr">
+      <UniqueIdentifier>{A33853E4-8F9B-E288-3821-1B3F2463AE0B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\frontend">
+      <UniqueIdentifier>{3D942C2B-A954-A861-728F-F1DEDE0EED3D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\frontend\manager">
+      <UniqueIdentifier>{87550B5B-F3C1-C655-BCB5-5EB328E1E8BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\frontend\widgets">
+      <UniqueIdentifier>{C348C96E-2FB5-8469-F8A8-1CC764D4A6D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\frontend\widgets\toggle">
+      <UniqueIdentifier>{34DF4785-209A-3731-C951-B07BB5EB81C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\hooking">
+      <UniqueIdentifier>{8C29808C-788C-0F31-2112-48E70D54DBB3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\logger">
+      <UniqueIdentifier>{7D462D7A-E9FB-A56F-72F0-9F46DEA49C73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\memory">
+      <UniqueIdentifier>{16E8D07B-829D-4971-0B92-434877464075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\renderer">
+      <UniqueIdentifier>{D4577B52-4018-F788-0953-400675D23B65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\settings">
+      <UniqueIdentifier>{4EC9DF4D-BA89-5B84-83C4-A401EF43A060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\util">
+      <UniqueIdentifier>{7B4464A5-E7AE-181C-30ED-C9C19C96F670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{9F35977C-8B6C-980D-3459-7E10206F140F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\backend">
+      <UniqueIdentifier>{7603A801-6266-37A6-0BEC-6F5CF72D0329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\commands">
+      <UniqueIdentifier>{E02F0F70-4CF0-8AA6-152B-D42381AACF82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features">
+      <UniqueIdentifier>{AD1B9A17-19DC-154E-E216-5FCB4E965A2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\network">
+      <UniqueIdentifier>{46F34851-B25F-044C-7B53-9CA9E77E26B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\players">
+      <UniqueIdentifier>{DCA53AFA-4812-F6F4-1106-8E527D31185D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\players\info">
+      <UniqueIdentifier>{57A46656-43B4-1227-AC6D-7745989C01C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\players\kick">
+      <UniqueIdentifier>{6DA76756-59B7-1327-C270-7845AE9F02C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\players\teleport">
+      <UniqueIdentifier>{3A4BD036-2671-9A9D-0FB7-1F69FB7BBF69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\players\toxic">
+      <UniqueIdentifier>{52150324-BE22-310A-4709-2DF5B315FDC0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\players\troll">
+      <UniqueIdentifier>{98940424-04A2-320A-8D88-2EF5F994FEC0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\recovery">
+      <UniqueIdentifier>{8BD93903-77D3-6255-6040-F9654CD9C8C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\recovery\Heist">
+      <UniqueIdentifier>{D71F4A26-C3DA-39D2-6C92-B21C582C8462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\self">
+      <UniqueIdentifier>{06BB427A-F29E-03D0-5BFF-FD224702EE51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\system">
+      <UniqueIdentifier>{419E4B17-2D2D-D5E0-D64B-E9DBC2B9E586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\teleport">
+      <UniqueIdentifier>{2BDC03F0-17D6-2C42-0043-C352ECDB92AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\vehicle">
+      <UniqueIdentifier>{1CD239B8-883E-F5B2-5132-8D10BD5D171B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\features\world">
+      <UniqueIdentifier>{4414E8C2-B075-C5D0-39E3-0B83A543FC8F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend">
+      <UniqueIdentifier>{AE148A20-1AD5-0557-E30F-4FD44F8F4A33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\fonts">
+      <UniqueIdentifier>{8759F533-F3BA-D241-7C28-19F4E8880901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\items">
+      <UniqueIdentifier>{BF392E34-2B9B-0B42-B408-52F420694201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\submenus">
+      <UniqueIdentifier>{2F9F9F8D-1B99-C8DF-0406-5FF0F09E2E4C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\submenus\Debug">
+      <UniqueIdentifier>{E5103609-D1CB-25B5-7A83-9EFF661D7045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\submenus\Network">
+      <UniqueIdentifier>{A8400B32-9466-D598-7DAC-5A646971FA64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\submenus\Player">
+      <UniqueIdentifier>{6B45744C-D75D-5B76-A00A-EB0F0CE2EF0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\submenus\Recovery">
+      <UniqueIdentifier>{2DD345FC-99B6-543C-A2B9-82780E1C1B8D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\submenus\Recovery\Heist">
+      <UniqueIdentifier>{F94A0797-650F-0687-2E75-36519AF8A1BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gta">
+      <UniqueIdentifier>{6A7882BA-5645-DDC5-7F5E-CB6D6B8A1254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gta\data">
+      <UniqueIdentifier>{334C9B81-9F0C-17B8-6847-6035D4C65B94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gta\invoker">
+      <UniqueIdentifier>{37B6E7A8-23AF-06FB-4CE1-EB7F3839E606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\hooks">
+      <UniqueIdentifier>{52DF1165-3E97-53B2-A79E-2C0E9375EEA2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\hooks\Anticheat">
+      <UniqueIdentifier>{32EA44DB-1E79-CEA4-C797-E29FB305DF4A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\hooks\GUI">
+      <UniqueIdentifier>{6637D04E-5205-C454-3B99-347B2706A0B9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\hooks\Info">
+      <UniqueIdentifier>{6DABD828-D936-46ED-E247-C9E14E52A2ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\hooks\Network">
+      <UniqueIdentifier>{CBF3C064-B7D7-81BA-2038-7C0D0C3B6C3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\hooks\Script">
+      <UniqueIdentifier>{564D44D8-C263-426E-0BDB-CD8F773013F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\hooks\Spoofing">
+      <UniqueIdentifier>{C68DA9DC-32EF-86EA-BB5C-CD9C27BDBDA9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\pointers">
+      <UniqueIdentifier>{02BC2E66-6E7C-AA9C-37B7-F319A336EF78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types">
+      <UniqueIdentifier>{5A5E7610-C672-9EC1-8FF4-4121FBC79AF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\entity">
+      <UniqueIdentifier>{86959780-72F8-2625-1B7E-5FDB07C0F2A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\fx">
+      <UniqueIdentifier>{A7CD73F8-939A-CE03-BCB3-BCABA8DF0392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\netshop">
+      <UniqueIdentifier>{4A435D33-B603-D969-7F3E-22E7EBBD1D46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network">
+      <UniqueIdentifier>{F3925F33-5F53-DB69-288E-24E7940D2046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync">
+      <UniqueIdentifier>{5F0354F2-4BE7-1448-B447-0F9BA04AFFC9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes">
+      <UniqueIdentifier>{87608E56-7385-DDD6-9CD0-C2668854DCF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\automobile">
+      <UniqueIdentifier>{47CCB52A-B385-20D5-3CE5-3AAFA89DD644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\door">
+      <UniqueIdentifier>{6A09FECC-D621-E5F6-9FCE-74900BA67990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\dynamic_entity">
+      <UniqueIdentifier>{574A588C-C3D9-1977-CCD5-FA8E38E45483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\entity">
+      <UniqueIdentifier>{13C3EB06-7FA6-FA46-88A9-2883F40BC197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\heli">
+      <UniqueIdentifier>{F80F00CD-6428-E7F6-2DD5-769099AC7B90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\object">
+      <UniqueIdentifier>{4DA4601D-B987-6F5D-C28A-9D992EED35AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\ped">
+      <UniqueIdentifier>{AFFB64C0-9BB6-546C-446E-CDB630089FFC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\physical">
+      <UniqueIdentifier>{53F437D6-BF62-8D55-084C-485574F982F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\pickup">
+      <UniqueIdentifier>{A2BD3020-0EA1-3F60-17A4-6D9C830606B1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\pickup_placement">
+      <UniqueIdentifier>{9AB2EF2D-06CD-52CF-4FEF-6263BB487AD6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\player">
+      <UniqueIdentifier>{E3276620-4F0B-7560-580E-A39CC4703BB1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\proximity_migrateable">
+      <UniqueIdentifier>{A76944FD-93E7-9496-7CDF-522E68FCD6BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\task">
+      <UniqueIdentifier>{699406CD-D5AC-EDF6-9E59-7D900A318290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\train">
+      <UniqueIdentifier>{9427E26D-804D-ACD4-6993-31A05558D1A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\network\sync\nodes\vehicle">
+      <UniqueIdentifier>{F6502AEB-E2A1-152D-0B06-04EFF7B5A896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\pad">
+      <UniqueIdentifier>{7EAAED06-EA14-A27D-3353-53239FFC7FD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\ped">
+      <UniqueIdentifier>{02ABED06-6E15-A27D-B753-532323FD7FD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\rage">
+      <UniqueIdentifier>{C813A4E4-B4CB-E531-1DD3-BE8D09AA8022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\script">
+      <UniqueIdentifier>{7EA777A0-6A0A-0745-1390-3FFBFFD1D2C7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\script\globals">
+      <UniqueIdentifier>{71F82F07-5D87-B9D0-06A6-CDCBF213CA76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\script\locals">
+      <UniqueIdentifier>{8B6DCBF4-F7CE-A802-803C-EFB4EC9CDFC1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\socialclub">
+      <UniqueIdentifier>{4A087F55-3601-9EA7-5F33-832C4B8B7DB3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\stats">
+      <UniqueIdentifier>{58F94279-C4AE-BB6E-4DA3-B545B957B272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\vehicle">
+      <UniqueIdentifier>{C971509A-3532-CCD0-FE6C-154E6AEC10AD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.hpp" />
+    <ClInclude Include="src\core\backend\FiberPool.hpp">
+      <Filter>core\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\backend\PatternCache.hpp">
+      <Filter>core\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\backend\ScriptMgr.hpp">
+      <Filter>core\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\BoolCommand.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\ColorCommand.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\Command.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\Commands.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\FloatCommand.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\HotkeySystem.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\IntCommand.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\ListCommand.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\LoopedCommand.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\StringCommand.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\commands\Vector3Command.hpp">
+      <Filter>core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\filemgr\BaseObj.hpp">
+      <Filter>core\filemgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\filemgr\CacheFile.hpp">
+      <Filter>core\filemgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\filemgr\File.hpp">
+      <Filter>core\filemgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\filemgr\FileMgr.hpp">
+      <Filter>core\filemgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\filemgr\Folder.hpp">
+      <Filter>core\filemgr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\Notifications.hpp">
+      <Filter>core\frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\manager\Category.hpp">
+      <Filter>core\frontend\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\manager\Submenu.hpp">
+      <Filter>core\frontend\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\manager\UIItem.hpp">
+      <Filter>core\frontend\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\manager\UIManager.hpp">
+      <Filter>core\frontend\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\widgets\imgui_colors.h">
+      <Filter>core\frontend\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_offset_rect.hpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle.hpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle_math.hpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle_palette.hpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle_presets.hpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\widgets\toggle\imgui_toggle_renderer.hpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooking\BaseHook.hpp">
+      <Filter>core\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooking\CallHook.hpp">
+      <Filter>core\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooking\DetourHook.hpp">
+      <Filter>core\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooking\Hooking.hpp">
+      <Filter>core\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooking\IATHook.hpp">
+      <Filter>core\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooking\MinHook.hpp">
+      <Filter>core\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooking\VMTHook.hpp">
+      <Filter>core\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\logger\ExceptionHandler.hpp">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\logger\LogColor.hpp">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\logger\LogHelper.hpp">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\logger\LogSink.hpp">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\logger\StackTrace.hpp">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\memory\BytePatches.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\memory\Module.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\memory\ModuleMgr.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\memory\Pattern.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\memory\PatternHash.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\memory\PatternScanner.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\memory\PointerCalculator.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\renderer\Renderer.hpp">
+      <Filter>core\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\settings\IStateSerializer.hpp">
+      <Filter>core\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\settings\Settings.hpp">
+      <Filter>core\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\util\Joaat.hpp">
+      <Filter>core\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\util\Math.hpp">
+      <Filter>core\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\util\RateLimiter.hpp">
+      <Filter>core\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\util\StrToHex.hpp">
+      <Filter>core\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\AnticheatBypass.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\NativeHooks.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\NodeHooks.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\PlayerData.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\Players.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\SavedLocations.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\SavedPlayerData.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\SavedPlayers.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\SavedVariables.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\ScriptPatches.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\ScriptPointers.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\Self.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\Tunables.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\commands\PlayerCommand.hpp">
+      <Filter>game\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\features\recovery\GiveVehicleReward.hpp">
+      <Filter>game\features\recovery</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\ChatDisplay.hpp">
+      <Filter>game\frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\ESP.hpp">
+      <Filter>game\frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\GUI.hpp">
+      <Filter>game\frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\Menu.hpp">
+      <Filter>game\frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\Overlay.hpp">
+      <Filter>game\frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\fonts\Fonts.hpp">
+      <Filter>game\frontend\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\items\Items.hpp">
+      <Filter>game\frontend\items</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Debug.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Debug\DrawVariable.hpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Debug\Globals.hpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Debug\Locals.hpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Debug\Misc.hpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Network.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Network\RandomEvents.hpp">
+      <Filter>game\frontend\submenus\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Network\SavedPlayers.hpp">
+      <Filter>game\frontend\submenus\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Player\Info.hpp">
+      <Filter>game\frontend\submenus\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Player\Kick.hpp">
+      <Filter>game\frontend\submenus\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Player\Toxic.hpp">
+      <Filter>game\frontend\submenus\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Player\Troll.hpp">
+      <Filter>game\frontend\submenus\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Players.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\ApartmentHeist.hpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\CayoPericoHeist.hpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\DiamondCasinoHeist.hpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\DoomsdayHeist.hpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\HeistModifier.hpp">
+      <Filter>game\frontend\submenus\Recovery</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\StatEditor.hpp">
+      <Filter>game\frontend\submenus\Recovery</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Transactions.hpp">
+      <Filter>game\frontend\submenus\Recovery</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Self.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Settings.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Teleport.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\World.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Entity.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Natives.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Network.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Nodes.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Object.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Packet.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Ped.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Player.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Pools.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\ScriptData.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\ScriptFunction.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\ScriptGlobal.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\ScriptLocal.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\ScriptPointer.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Scripts.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Stats.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\Vehicle.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\IPL.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\RandomEvents.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\VehicleValues.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\Weapons.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\invoker\Crossmap.hpp">
+      <Filter>game\gta\invoker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\invoker\Invoker.hpp">
+      <Filter>game\gta\invoker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\hooks\Hooks.hpp">
+      <Filter>game\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\pointers\Pointers.hpp">
+      <Filter>game\pointers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\entity\CDynamicEntity.hpp">
+      <Filter>types\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\entity\CEntity.hpp">
+      <Filter>types\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\entity\fwEntity.hpp">
+      <Filter>types\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\fx\ExplosionType.hpp">
+      <Filter>types\fx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\netshop\CNetShopTransaction.hpp">
+      <Filter>types\netshop</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\netshop\netCatalogBaseItem.hpp">
+      <Filter>types\netshop</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\CNetGamePlayer.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\CNetworkPlayerMgr.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netAddress.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netArrayHandler.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netArrayHandlerBase.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netArrayIdentifierBase.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netArrayMgr.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netEvent.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netGameEvent.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netMessage.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netObject.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netObjectMgrBase.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netPlayer.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netPlayerMgrBase.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\netSocketAddress.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\rlGamerHandle.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\rlGamerInfo.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\rlGamerInfoBase.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\rlSessionByGamerHandleTaskResult.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\rlSessionInfo.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\rlTaskStatus.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\CProjectBaseSyncDataNode.hpp">
+      <Filter>types\network\sync</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\NodeCommonDataOperations.hpp">
+      <Filter>types\network\sync</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\netSyncDataNode.hpp">
+      <Filter>types\network\sync</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\netSyncNodeBase.hpp">
+      <Filter>types\network\sync</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\netSyncTree.hpp">
+      <Filter>types\network\sync</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\CPedComponents.hpp">
+      <Filter>types\network\sync\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\automobile\CAutomobileCreationNode.hpp">
+      <Filter>types\network\sync\nodes\automobile</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\door\CDoorCreationDataNode.hpp">
+      <Filter>types\network\sync\nodes\door</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\door\CDoorMovementDataNode.hpp">
+      <Filter>types\network\sync\nodes\door</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\door\CDoorScriptGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\door</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\door\CDoorScriptInfoDataNode.hpp">
+      <Filter>types\network\sync\nodes\door</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\dynamic_entity\CDynamicEntityGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\dynamic_entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\entity\CEntityOrientationDataNode.hpp">
+      <Filter>types\network\sync\nodes\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\entity\CEntityScriptGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\entity\CEntityScriptInfoDataNode.hpp">
+      <Filter>types\network\sync\nodes\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\heli\CHeliControlDataNode.hpp">
+      <Filter>types\network\sync\nodes\heli</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\heli\CHeliHealthDataNode.hpp">
+      <Filter>types\network\sync\nodes\heli</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\object\CObjectCreationDataNode.hpp">
+      <Filter>types\network\sync\nodes\object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedAIDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedAppearanceDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedAttachDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedComponentReservationDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedCreationDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedHealthDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedInventoryDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedMovementDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedMovementGroupDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedOrientationDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedScriptCreationDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedTaskSequenceDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedTaskSpecificDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\ped\CPedTaskTreeDataNode.hpp">
+      <Filter>types\network\sync\nodes\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalAngVelocityDataNode.hpp">
+      <Filter>types\network\sync\nodes\physical</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalAttachDataNode.hpp">
+      <Filter>types\network\sync\nodes\physical</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\physical</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalHealthDataNode.hpp">
+      <Filter>types\network\sync\nodes\physical</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalMigrationDataNode.hpp">
+      <Filter>types\network\sync\nodes\physical</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalScriptGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\physical</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalScriptMigrationDataNode.hpp">
+      <Filter>types\network\sync\nodes\physical</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\physical\CPhysicalVelocityDataNode.hpp">
+      <Filter>types\network\sync\nodes\physical</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\pickup\CPickupCreationDataNode.hpp">
+      <Filter>types\network\sync\nodes\pickup</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\pickup_placement\CPickupPlacementCreationDataNode.hpp">
+      <Filter>types\network\sync\nodes\pickup_placement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerAmbientModelStreamingNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerAppearanceDataNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerCameraDataNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerCreationDataNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerExtendedGameStateNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerGamerDataNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerPedGroupDataNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerSectorPosNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\player\CPlayerWantedAndLOSDataNode.hpp">
+      <Filter>types\network\sync\nodes\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\proximity_migrateable\CGlobalFlagsDataNode.hpp">
+      <Filter>types\network\sync\nodes\proximity_migrateable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\proximity_migrateable\CMigrationDataNode.hpp">
+      <Filter>types\network\sync\nodes\proximity_migrateable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\proximity_migrateable\CSectorDataNode.hpp">
+      <Filter>types\network\sync\nodes\proximity_migrateable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\proximity_migrateable\CSectorPositionDataNode.hpp">
+      <Filter>types\network\sync\nodes\proximity_migrateable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\task\CClonedGeneralSweepInfo.hpp">
+      <Filter>types\network\sync\nodes\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\task\ClonedTakeOffPedVariationInfo.hpp">
+      <Filter>types\network\sync\nodes\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\train\CTrainGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\train</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleComponentReservationDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleControlDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleCreationDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleDamageStatusDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleGadgetDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleGameStateDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleHealthDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleProximityMigrationDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleSteeringDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\sync\nodes\vehicle\CVehicleTaskDataNode.hpp">
+      <Filter>types\network\sync\nodes\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\pad\ControllerInputs.hpp">
+      <Filter>types\pad</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\ped\CPedFactory.hpp">
+      <Filter>types\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\ped\PedConfigFlag.hpp">
+      <Filter>types\ped</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\PoolEncryption.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\RTTI.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\atArray.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\datBase.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\datBitBuffer.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\fwBasePool.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\fwExtensibleBase.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\fwExtension.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\fwExtensionContainer.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\fwRefAwareBase.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\fwRefAwareBaseImpl.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\pgBase.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\sysMemAllocator.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\tlsContext.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\rage\vector.hpp">
+      <Filter>types\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\CGameScriptHandler.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\CGameScriptHandlerNetComponent.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\CGameScriptId.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\CGameScriptObjInfo.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\GtaThread.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\HudColor.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\MPScriptData.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\ScriptEvent.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\Timer.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GPBD_FM.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GPBD_FM_2.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GPBD_FM_3.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GPBD_Kicking.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GPBD_MissionName.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GSBD.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GSBD_BlockB.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GSBD_FM.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GSBD_FM_Events.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GSBD_Kicking.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GSBD_PropertyInstances.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GSBD_RandomEvents.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GlobalPlayerBD.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\g_AMC_playerBD.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\locals\FMRandomEvents.hpp">
+      <Filter>types\script\locals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\locals\VehicleRewardData.hpp">
+      <Filter>types\script\locals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\scrNativeHandler.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\scrProgram.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\scrThread.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\scrVector.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\scriptHandler.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\scriptHandlerNetComponent.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\scriptId.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\scriptIdBase.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\types.hpp">
+      <Filter>types\script</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\socialclub\rlGetAvatarsContext.hpp">
+      <Filter>types\socialclub</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\socialclub\rlQueryAccountsResult.hpp">
+      <Filter>types\socialclub</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\socialclub\rlQueryPresenceAttributesContext.hpp">
+      <Filter>types\socialclub</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\socialclub\rlScGamerHandle.hpp">
+      <Filter>types\socialclub</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\socialclub\rlScTaskStatus.hpp">
+      <Filter>types\socialclub</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\stats\CStatsMgr.hpp">
+      <Filter>types\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\stats\sStatData.hpp">
+      <Filter>types\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\vehicle\fwVehiclePool.hpp">
+      <Filter>types\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\frontend\widgets\imgui_bitfield.hpp">
+      <Filter>core\frontend\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Debug\Scripts.hpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\ScriptNames.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\StackSizes.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\OutfitEditor.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\common.cpp" />
+    <ClCompile Include="src\core\backend\FiberPool.cpp">
+      <Filter>core\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\backend\PatternCache.cpp">
+      <Filter>core\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\backend\ScriptMgr.cpp">
+      <Filter>core\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\BoolCommand.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\ColorCommand.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\Command.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\Commands.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\FloatCommand.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\HotkeySystem.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\IntCommand.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\ListCommand.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\LoopedCommand.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\StringCommand.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\commands\Vector3Command.cpp">
+      <Filter>core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\filemgr\BaseObj.cpp">
+      <Filter>core\filemgr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\filemgr\CacheFile.cpp">
+      <Filter>core\filemgr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\filemgr\File.cpp">
+      <Filter>core\filemgr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\filemgr\FileMgr.cpp">
+      <Filter>core\filemgr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\filemgr\Folder.cpp">
+      <Filter>core\filemgr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\Notifications.cpp">
+      <Filter>core\frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\manager\Category.cpp">
+      <Filter>core\frontend\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\manager\Submenu.cpp">
+      <Filter>core\frontend\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\manager\UIManager.cpp">
+      <Filter>core\frontend\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle.cpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle_palette.cpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle_presets.cpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle_renderer.cpp">
+      <Filter>core\frontend\widgets\toggle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\hooking\BaseHook.cpp">
+      <Filter>core\hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\hooking\CallHook.cpp">
+      <Filter>core\hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\hooking\Hooking.cpp">
+      <Filter>core\hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\logger\ExceptionHandler.cpp">
+      <Filter>core\logger</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\logger\LogHelper.cpp">
+      <Filter>core\logger</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\logger\LogSink.cpp">
+      <Filter>core\logger</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\logger\StackTrace.cpp">
+      <Filter>core\logger</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\memory\BytePatches.cpp">
+      <Filter>core\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\memory\Module.cpp">
+      <Filter>core\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\memory\ModuleMgr.cpp">
+      <Filter>core\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\memory\Pattern.cpp">
+      <Filter>core\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\memory\PatternScanner.cpp">
+      <Filter>core\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\renderer\Renderer.cpp">
+      <Filter>core\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\settings\IStateSerializer.cpp">
+      <Filter>core\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\settings\Settings.cpp">
+      <Filter>core\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\AnticheatBypass.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\NativeHooks.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\NodeHooks.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\Players.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\SavedLocations.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\SavedPlayerData.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\SavedPlayers.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\SavedVariables.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\ScriptPatches.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\ScriptPointers.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\Self.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\Tunables.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\commands\PlayerCommand.cpp">
+      <Filter>game\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\BypassCasinoRestrictions.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\DisableDeathBarriers.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\FastJoin.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\ForceScriptHost.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\HarassPlayers.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\JoinSession.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\SpamKillfeed.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\SpoofMatchmakingRegion.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\info\Spectate.cpp">
+      <Filter>game\features\players\info</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\kick\FreemodeStateKick.cpp">
+      <Filter>game\features\players\kick</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\kick\NullFunctionKick.cpp">
+      <Filter>game\features\players\kick</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\kick\ScriptHostKick.cpp">
+      <Filter>game\features\players\kick</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\teleport\Bring.cpp">
+      <Filter>game\features\players\teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\teleport\TeleportToCoord.cpp">
+      <Filter>game\features\players\teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\teleport\TeleportToPlayer.cpp">
+      <Filter>game\features\players\teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\toxic\CeoKick.cpp">
+      <Filter>game\features\players\toxic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\toxic\Explode.cpp">
+      <Filter>game\features\players\toxic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\toxic\Kill.cpp">
+      <Filter>game\features\players\toxic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\toxic\KillLoopExploit.cpp">
+      <Filter>game\features\players\toxic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\troll\DeleteVehicle.cpp">
+      <Filter>game\features\players\troll</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\troll\SendSext.cpp">
+      <Filter>game\features\players\troll</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\troll\SetBounty.cpp">
+      <Filter>game\features\players\troll</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\DLCVehicles.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\GiveVehicleReward.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp">
+      <Filter>game\features\recovery\Heist</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\Heist\CayoPericoHeist.cpp">
+      <Filter>game\features\recovery\Heist</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\Heist\DiamondCasinoHeist.cpp">
+      <Filter>game\features\recovery\Heist</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\Heist\DoomsdayHeist.cpp">
+      <Filter>game\features\recovery\Heist</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\PlayAllMissionsSolo.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\ClearDamage.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\DisableActionMode.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\FillInventory.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\FormatMoney.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\Freecam.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\GiveAllWeapons.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\Godmode.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\Heal.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\InfiniteAmmo.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\InfiniteClip.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\InfiniteParachutes.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\Invis.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\MobileRadio.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\NoIdleKick.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\NoRagdoll.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\Noclip.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\OffTheRadar.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\OpenWardrobe.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\RapidFire.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\SkipCutscene.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\StandOnVehicles.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\Suicide.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\SuperJump.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\SuperRun.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\UnlimitedOxygen.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\Wanted.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\system\Chat.cpp">
+      <Filter>game\features\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\system\DespawnBypass.cpp">
+      <Filter>game\features\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\system\LSCCustomsBypass.cpp">
+      <Filter>game\features\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\teleport\TpToWaypoint.cpp">
+      <Filter>game\features\teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\AllowHatsInVehicles.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\EnterLast.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Fix.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Godmode.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\HornBoost.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\KeepFixed.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\RocketBoost.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Seatbelt.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Spawn.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Speedometer.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\Bring.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\Delete.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\IPLManager.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\Kill.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\Weather.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\ChatDisplay.cpp">
+      <Filter>game\frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\ESP.cpp">
+      <Filter>game\frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\GUI.cpp">
+      <Filter>game\frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\Menu.cpp">
+      <Filter>game\frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\Overlay.cpp">
+      <Filter>game\frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\fonts\MainFont.cpp">
+      <Filter>game\frontend\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\BoolCommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\Button.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\ColorCommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\CommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\ConditionalItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\FloatCommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\Group.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\HotkeySetter.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\ImGuiItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\InputTextWithHint.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\IntCommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\ListCommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\PlayerCommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\StringCommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\TabItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\Vector3CommandItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Debug.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Debug\Globals.cpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Debug\Locals.cpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Debug\Misc.cpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Network.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Network\RandomEvents.cpp">
+      <Filter>game\frontend\submenus\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Network\SavedPlayers.cpp">
+      <Filter>game\frontend\submenus\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Player\Info.cpp">
+      <Filter>game\frontend\submenus\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Player\Kick.cpp">
+      <Filter>game\frontend\submenus\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Player\Toxic.cpp">
+      <Filter>game\frontend\submenus\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Player\Troll.cpp">
+      <Filter>game\frontend\submenus\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Players.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\ApartmentHeist.cpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\CayoPericoHeist.cpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\DiamondCasinoHeist.cpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\DoomsdayHeist.cpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\HeistModifier.cpp">
+      <Filter>game\frontend\submenus\Recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\StatEditor.cpp">
+      <Filter>game\frontend\submenus\Recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Transactions.cpp">
+      <Filter>game\frontend\submenus\Recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Self.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Settings.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Teleport.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\World.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Entity.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Network.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Nodes.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Object.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Packet.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Ped.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Player.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Pools.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\ScriptData.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\ScriptFunction.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\ScriptGlobal.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\ScriptLocal.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\ScriptPointer.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Scripts.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Stats.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\Vehicle.cpp">
+      <Filter>game\gta</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\invoker\Invoker.cpp">
+      <Filter>game\gta\invoker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Anticheat\GetThreadContext.cpp">
+      <Filter>game\hooks\Anticheat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Anticheat\HttpStartRequest.cpp">
+      <Filter>game\hooks\Anticheat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Anticheat\PrepareMetricForSending.cpp">
+      <Filter>game\hooks\Anticheat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Anticheat\QueueDependency.cpp">
+      <Filter>game\hooks\Anticheat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\GUI\SwapChain.cpp">
+      <Filter>game\hooks\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\GUI\Window.cpp">
+      <Filter>game\hooks\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Info\AssignPhysicalIndex.cpp">
+      <Filter>game\hooks\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Info\NetworkPlayerManagerShutdown.cpp">
+      <Filter>game\hooks\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Network\HandleNetGameEvent.cpp">
+      <Filter>game\hooks\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Network\HandleScriptedGameEvent.cpp">
+      <Filter>game\hooks\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Network\ReceiveNetMessage.cpp">
+      <Filter>game\hooks\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Script\InitNativeTables.cpp">
+      <Filter>game\hooks\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Script\RunScriptThreads.cpp">
+      <Filter>game\hooks\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Script\ScriptVM.cpp">
+      <Filter>game\hooks\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Spoofing\IsNodeInScope.cpp">
+      <Filter>game\hooks\Spoofing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Spoofing\ShouldUseNodeCache.cpp">
+      <Filter>game\hooks\Spoofing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Spoofing\WriteNetArrayData.cpp">
+      <Filter>game\hooks\Spoofing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Spoofing\WriteNodeData.cpp">
+      <Filter>game\hooks\Spoofing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Spoofing\WriteSyncTree.cpp">
+      <Filter>game\hooks\Spoofing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\pointers\Pointers.cpp">
+      <Filter>game\pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\types\network\netGameEvent.cpp">
+      <Filter>types\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\network\rlGamerHandle.cpp">
+      <Filter>types\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\script\CGameScriptId.cpp">
+      <Filter>types\script</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\script\ScriptEvent.cpp">
+      <Filter>types\script</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\script\Timer.cpp">
+      <Filter>types\script</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\script\globals\Globals.cpp">
+      <Filter>types\script\globals</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\script\locals\Locals.cpp">
+      <Filter>types\script\locals</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\script\scrThread.cpp">
+      <Filter>types\script</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\stats\CStatsMgr.cpp">
+      <Filter>types\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Debug\DrawVariable.cpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Debug\Scripts.cpp">
+      <Filter>game\frontend\submenus\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\Aimbot.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\KeepPlayerClean.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\SkipConversation.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\kick\HostKick.cpp">
+      <Filter>game\features\players\kick</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\PauseGame.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\ExplosiveAmmo.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\CopsDispatch.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\Pedsignore.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\RiotMode.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\OutfitEditor.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\CheaterPool.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
