@@ -250,6 +250,9 @@
     <Filter Include="types\vehicle">
       <UniqueIdentifier>{C971509A-3532-CCD0-FE6C-154E6AEC10AD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\frontend\submenus\Vehicle">
+      <UniqueIdentifier>{46173ca6-c4f6-44d3-a64d-a30bac3148f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -465,9 +468,6 @@
     </ClInclude>
     <ClInclude Include="src\game\commands\PlayerCommand.hpp">
       <Filter>game\commands</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\features\recovery\GiveVehicleReward.hpp">
-      <Filter>game\features\recovery</Filter>
     </ClInclude>
     <ClInclude Include="src\game\frontend\ChatDisplay.hpp">
       <Filter>game\frontend</Filter>
@@ -1126,6 +1126,18 @@
     <ClInclude Include="src\game\frontend\submenus\OutfitEditor.hpp">
       <Filter>game\frontend\submenus</Filter>
     </ClInclude>
+    <ClInclude Include="src\game\features\vehicle\SavePersonalVehicle.hpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Vehicle.hpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\Vehicles.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Vehicle\SpawnVehicle.hpp">
+      <Filter>game\frontend\submenus\Vehicle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -1360,13 +1372,7 @@
     <ClCompile Include="src\game\features\players\troll\SetBounty.cpp">
       <Filter>game\features\players\troll</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\features\recovery\DLCVehicles.cpp">
-      <Filter>game\features\recovery</Filter>
-    </ClCompile>
     <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp">
-      <Filter>game\features\recovery</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\recovery\GiveVehicleReward.cpp">
       <Filter>game\features\recovery</Filter>
     </ClCompile>
     <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp">
@@ -1473,36 +1479,6 @@
     </ClCompile>
     <ClCompile Include="src\game\features\teleport\TpToWaypoint.cpp">
       <Filter>game\features\teleport</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\AllowHatsInVehicles.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\EnterLast.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\Fix.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\Godmode.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\HornBoost.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\KeepFixed.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\RocketBoost.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\Seatbelt.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\Spawn.cpp">
-      <Filter>game\features\vehicle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\vehicle\Speedometer.cpp">
-      <Filter>game\features\vehicle</Filter>
     </ClCompile>
     <ClCompile Include="src\game\features\world\Bring.cpp">
       <Filter>game\features\world</Filter>
@@ -1834,6 +1810,51 @@
     </ClCompile>
     <ClCompile Include="src\game\features\network\CheaterPool.cpp">
       <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\AllowHatsInVehicles.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\CallMechanic.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\DLCVehicles.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\EnterLast.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Fix.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Godmode.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\HornBoost.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\KeepFixed.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\RocketBoost.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\SavePersonalVehicle.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Seatbelt.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Speedometer.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\Spawn.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Vehicle.cpp">
+      <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Vehicle\SpawnVehicle.cpp">
+      <Filter>game\frontend\submenus\Vehicle</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

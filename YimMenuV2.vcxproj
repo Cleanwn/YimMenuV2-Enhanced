@@ -134,7 +134,7 @@
     <ClInclude Include="src\game\backend\Self.hpp" />
     <ClInclude Include="src\game\backend\Tunables.hpp" />
     <ClInclude Include="src\game\commands\PlayerCommand.hpp" />
-    <ClInclude Include="src\game\features\recovery\GiveVehicleReward.hpp" />
+    <ClInclude Include="src\game\features\vehicle\SavePersonalVehicle.hpp" />
     <ClInclude Include="src\game\frontend\ChatDisplay.hpp" />
     <ClInclude Include="src\game\frontend\ESP.hpp" />
     <ClInclude Include="src\game\frontend\GUI.hpp" />
@@ -168,9 +168,12 @@
     <ClInclude Include="src\game\frontend\submenus\Self.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Settings.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Teleport.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Vehicle.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Vehicle\SpawnVehicle.hpp" />
     <ClInclude Include="src\game\frontend\submenus\World.hpp" />
     <ClInclude Include="src\game\gta\data\ScriptNames.hpp" />
     <ClInclude Include="src\game\gta\data\StackSizes.hpp" />
+    <ClInclude Include="src\game\gta\data\Vehicles.hpp" />
     <ClInclude Include="src\game\gta\Entity.hpp" />
     <ClInclude Include="src\game\gta\Natives.hpp" />
     <ClInclude Include="src\game\gta\Network.hpp" />
@@ -438,9 +441,7 @@
     <ClCompile Include="src\game\features\players\troll\DeleteVehicle.cpp" />
     <ClCompile Include="src\game\features\players\troll\SendSext.cpp" />
     <ClCompile Include="src\game\features\players\troll\SetBounty.cpp" />
-    <ClCompile Include="src\game\features\recovery\DLCVehicles.cpp" />
     <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp" />
-    <ClCompile Include="src\game\features\recovery\GiveVehicleReward.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\CayoPericoHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\DiamondCasinoHeist.cpp" />
@@ -481,16 +482,16 @@
     <ClCompile Include="src\game\features\system\LSCCustomsBypass.cpp" />
     <ClCompile Include="src\game\features\teleport\TpToWaypoint.cpp" />
     <ClCompile Include="src\game\features\vehicle\AllowHatsInVehicles.cpp" />
+    <ClCompile Include="src\game\features\vehicle\CallMechanic.cpp" />
+    <ClCompile Include="src\game\features\vehicle\DLCVehicles.cpp" />
     <ClCompile Include="src\game\features\vehicle\EnterLast.cpp" />
     <ClCompile Include="src\game\features\vehicle\Fix.cpp" />
-    <ClCompile Include="src\game\features\vehicle\Godmode.cpp">
-      <ObjectFileName>$(IntDir)\Godmode1.obj</ObjectFileName>
-    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\Godmode.cpp" />
     <ClCompile Include="src\game\features\vehicle\HornBoost.cpp" />
     <ClCompile Include="src\game\features\vehicle\KeepFixed.cpp" />
     <ClCompile Include="src\game\features\vehicle\RocketBoost.cpp" />
+    <ClCompile Include="src\game\features\vehicle\SavePersonalVehicle.cpp" />
     <ClCompile Include="src\game\features\vehicle\Seatbelt.cpp" />
-    <ClCompile Include="src\game\features\vehicle\Spawn.cpp" />
     <ClCompile Include="src\game\features\vehicle\Speedometer.cpp" />
     <ClCompile Include="src\game\features\world\Bring.cpp">
       <ObjectFileName>$(IntDir)\Bring1.obj</ObjectFileName>
@@ -503,6 +504,7 @@
     </ClCompile>
     <ClCompile Include="src\game\features\world\Pedsignore.cpp" />
     <ClCompile Include="src\game\features\world\RiotMode.cpp" />
+    <ClCompile Include="src\game\features\world\Spawn.cpp" />
     <ClCompile Include="src\game\features\world\Weather.cpp" />
     <ClCompile Include="src\game\frontend\ChatDisplay.cpp" />
     <ClCompile Include="src\game\frontend\ESP.cpp" />
@@ -568,6 +570,8 @@
       <ObjectFileName>$(IntDir)\Settings1.obj</ObjectFileName>
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Teleport.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Vehicle.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Vehicle\SpawnVehicle.cpp" />
     <ClCompile Include="src\game\frontend\submenus\World.cpp" />
     <ClCompile Include="src\game\gta\Entity.cpp" />
     <ClCompile Include="src\game\gta\Network.cpp">
