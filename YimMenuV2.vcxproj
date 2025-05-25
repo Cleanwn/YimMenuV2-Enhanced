@@ -318,6 +318,7 @@
     <ClInclude Include="src\types\script\CGameScriptHandlerNetComponent.hpp" />
     <ClInclude Include="src\types\script\CGameScriptId.hpp" />
     <ClInclude Include="src\types\script\CGameScriptObjInfo.hpp" />
+    <ClInclude Include="src\types\script\globals\MPSV.hpp" />
     <ClInclude Include="src\types\script\GtaThread.hpp" />
     <ClInclude Include="src\types\script\HudColor.hpp" />
     <ClInclude Include="src\types\script\MPScriptData.hpp" />
@@ -354,6 +355,7 @@
     <ClInclude Include="src\types\socialclub\rlScGamerHandle.hpp" />
     <ClInclude Include="src\types\socialclub\rlScTaskStatus.hpp" />
     <ClInclude Include="src\types\stats\CStatsMgr.hpp" />
+    <ClInclude Include="src\types\stats\CStatsMpCharacterMappingData.hpp" />
     <ClInclude Include="src\types\stats\sStatData.hpp" />
     <ClInclude Include="src\types\vehicle\fwVehiclePool.hpp" />
   </ItemGroup>
@@ -486,6 +488,7 @@
     <ClCompile Include="src\game\features\vehicle\DLCVehicles.cpp" />
     <ClCompile Include="src\game\features\vehicle\EnterLast.cpp" />
     <ClCompile Include="src\game\features\vehicle\Fix.cpp" />
+    <ClCompile Include="src\game\features\vehicle\FixAllVehicles.cpp" />
     <ClCompile Include="src\game\features\vehicle\Godmode.cpp" />
     <ClCompile Include="src\game\features\vehicle\HornBoost.cpp" />
     <ClCompile Include="src\game\features\vehicle\KeepFixed.cpp" />
@@ -626,6 +629,7 @@
     </ClCompile>
     <ClCompile Include="src\types\script\scrThread.cpp" />
     <ClCompile Include="src\types\stats\CStatsMgr.cpp" />
+    <ClCompile Include="src\types\stats\CStatsMpCharacterMappingData.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

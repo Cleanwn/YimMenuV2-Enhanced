@@ -1138,6 +1138,12 @@
     <ClInclude Include="src\game\frontend\submenus\Vehicle\SpawnVehicle.hpp">
       <Filter>game\frontend\submenus\Vehicle</Filter>
     </ClInclude>
+    <ClInclude Include="src\types\script\globals\MPSV.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\stats\CStatsMpCharacterMappingData.hpp">
+      <Filter>types\stats</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -1855,6 +1861,12 @@
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Vehicle\SpawnVehicle.cpp">
       <Filter>game\frontend\submenus\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\FixAllVehicles.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\types\stats\CStatsMpCharacterMappingData.cpp">
+      <Filter>types\stats</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
