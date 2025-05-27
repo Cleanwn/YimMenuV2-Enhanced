@@ -1868,5 +1868,14 @@
     <ClCompile Include="src\types\stats\CStatsMpCharacterMappingData.cpp">
       <Filter>types\stats</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\features\recovery\Casino.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\RpMultiplier.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\GiveMaxAmmo.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

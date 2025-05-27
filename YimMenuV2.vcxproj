@@ -443,12 +443,14 @@
     <ClCompile Include="src\game\features\players\troll\DeleteVehicle.cpp" />
     <ClCompile Include="src\game\features\players\troll\SendSext.cpp" />
     <ClCompile Include="src\game\features\players\troll\SetBounty.cpp" />
+    <ClCompile Include="src\game\features\recovery\Casino.cpp" />
     <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\CayoPericoHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\DiamondCasinoHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\DoomsdayHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\PlayAllMissionsSolo.cpp" />
+    <ClCompile Include="src\game\features\recovery\RpMultiplier.cpp" />
     <ClCompile Include="src\game\features\self\Aimbot.cpp" />
     <ClCompile Include="src\game\features\self\ClearDamage.cpp" />
     <ClCompile Include="src\game\features\self\DisableActionMode.cpp" />
@@ -457,6 +459,7 @@
     <ClCompile Include="src\game\features\self\FormatMoney.cpp" />
     <ClCompile Include="src\game\features\self\Freecam.cpp" />
     <ClCompile Include="src\game\features\self\GiveAllWeapons.cpp" />
+    <ClCompile Include="src\game\features\self\GiveMaxAmmo.cpp" />
     <ClCompile Include="src\game\features\self\Godmode.cpp" />
     <ClCompile Include="src\game\features\self\Heal.cpp" />
     <ClCompile Include="src\game\features\self\InfiniteAmmo.cpp" />
