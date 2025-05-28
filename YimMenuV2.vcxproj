@@ -511,6 +511,7 @@
     <ClCompile Include="src\game\features\world\Pedsignore.cpp" />
     <ClCompile Include="src\game\features\world\RiotMode.cpp" />
     <ClCompile Include="src\game\features\world\Spawn.cpp" />
+    <ClCompile Include="src\game\features\world\TimeControl.cpp" />
     <ClCompile Include="src\game\features\world\Weather.cpp" />
     <ClCompile Include="src\game\frontend\ChatDisplay.cpp" />
     <ClCompile Include="src\game\frontend\ESP.cpp" />

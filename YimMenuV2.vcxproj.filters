@@ -1877,5 +1877,8 @@
     <ClCompile Include="src\game\features\self\GiveMaxAmmo.cpp">
       <Filter>game\features\self</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\features\world\TimeControl.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
