@@ -1144,6 +1144,12 @@
     <ClInclude Include="src\types\stats\CStatsMpCharacterMappingData.hpp">
       <Filter>types\stats</Filter>
     </ClInclude>
+    <ClInclude Include="src\types\script\globals\FreemodeGeneral.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\g_SavedMPGlobals.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -1879,6 +1885,9 @@
     </ClCompile>
     <ClCompile Include="src\game\features\world\TimeControl.cpp">
       <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\ClaimSafeEarnings.cpp">
+      <Filter>game\features\recovery</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

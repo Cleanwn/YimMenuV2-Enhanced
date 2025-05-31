@@ -318,6 +318,8 @@
     <ClInclude Include="src\types\script\CGameScriptHandlerNetComponent.hpp" />
     <ClInclude Include="src\types\script\CGameScriptId.hpp" />
     <ClInclude Include="src\types\script\CGameScriptObjInfo.hpp" />
+    <ClInclude Include="src\types\script\globals\FreemodeGeneral.hpp" />
+    <ClInclude Include="src\types\script\globals\g_SavedMPGlobals.hpp" />
     <ClInclude Include="src\types\script\globals\MPSV.hpp" />
     <ClInclude Include="src\types\script\GtaThread.hpp" />
     <ClInclude Include="src\types\script\HudColor.hpp" />
@@ -444,6 +446,7 @@
     <ClCompile Include="src\game\features\players\troll\SendSext.cpp" />
     <ClCompile Include="src\game\features\players\troll\SetBounty.cpp" />
     <ClCompile Include="src\game\features\recovery\Casino.cpp" />
+    <ClCompile Include="src\game\features\recovery\ClaimSafeEarnings.cpp" />
     <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\CayoPericoHeist.cpp" />
