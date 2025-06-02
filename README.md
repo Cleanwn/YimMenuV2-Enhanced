@@ -1,7 +1,6 @@
 # YimMenuV2
 
-1. Experimental menu for GTA 5: Enhanced
-2. 这是一个fork项目，我让他脱离了cmake工作 [源地址](https://github.com/YimMenu/YimMenuV2)
+Experimental menu for GTA 5: Enhanced
 
 ## How to use
 
