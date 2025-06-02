@@ -134,6 +134,7 @@
     <ClInclude Include="src\game\backend\Self.hpp" />
     <ClInclude Include="src\game\backend\Tunables.hpp" />
     <ClInclude Include="src\game\commands\PlayerCommand.hpp" />
+    <ClInclude Include="src\game\features\self\OpenGunLocker.hpp" />
     <ClInclude Include="src\game\features\vehicle\SavePersonalVehicle.hpp" />
     <ClInclude Include="src\game\frontend\ChatDisplay.hpp" />
     <ClInclude Include="src\game\frontend\ESP.hpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="src\game\frontend\submenus\Recovery\StatEditor.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\Transactions.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Self.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Self\Weapons.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Settings.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Teleport.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Vehicle.hpp" />
@@ -475,6 +477,7 @@
     <ClCompile Include="src\game\features\self\NoRagdoll.cpp" />
     <ClCompile Include="src\game\features\self\Noclip.cpp" />
     <ClCompile Include="src\game\features\self\OffTheRadar.cpp" />
+    <ClCompile Include="src\game\features\self\OpenGunLocker.cpp" />
     <ClCompile Include="src\game\features\self\OpenWardrobe.cpp" />
     <ClCompile Include="src\game\features\self\RapidFire.cpp" />
     <ClCompile Include="src\game\features\self\SkipConversation.cpp" />
@@ -576,6 +579,7 @@
     <ClCompile Include="src\game\frontend\submenus\Self.cpp">
       <ObjectFileName>$(IntDir)\Self1.obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Self\Weapons.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Settings.cpp">
       <ObjectFileName>$(IntDir)\Settings1.obj</ObjectFileName>
     </ClCompile>

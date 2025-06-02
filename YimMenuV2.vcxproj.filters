@@ -253,6 +253,9 @@
     <Filter Include="game\frontend\submenus\Vehicle">
       <UniqueIdentifier>{46173ca6-c4f6-44d3-a64d-a30bac3148f8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\frontend\submenus\Self">
+      <UniqueIdentifier>{9aec5c05-0f08-4785-b778-8feb5e385484}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1150,6 +1153,12 @@
     <ClInclude Include="src\types\script\globals\g_SavedMPGlobals.hpp">
       <Filter>types\script\globals</Filter>
     </ClInclude>
+    <ClInclude Include="src\game\features\self\OpenGunLocker.hpp">
+      <Filter>game\features\self</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Self\Weapons.hpp">
+      <Filter>game\frontend\submenus\Self</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -1888,6 +1897,12 @@
     </ClCompile>
     <ClCompile Include="src\game\features\recovery\ClaimSafeEarnings.cpp">
       <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\OpenGunLocker.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Self\Weapons.cpp">
+      <Filter>game\frontend\submenus\Self</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
