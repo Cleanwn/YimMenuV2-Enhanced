@@ -140,6 +140,7 @@
     <ClInclude Include="src\game\frontend\ESP.hpp" />
     <ClInclude Include="src\game\frontend\GUI.hpp" />
     <ClInclude Include="src\game\frontend\Menu.hpp" />
+    <ClInclude Include="src\game\frontend\Onboarding.hpp" />
     <ClInclude Include="src\game\frontend\Overlay.hpp" />
     <ClInclude Include="src\game\frontend\fonts\Fonts.hpp" />
     <ClInclude Include="src\game\frontend\items\Items.hpp" />
@@ -152,7 +153,6 @@
     <ClInclude Include="src\game\frontend\submenus\Network.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Network\RandomEvents.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Network\SavedPlayers.hpp" />
-    <ClInclude Include="src\game\frontend\submenus\OutfitEditor.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Player\Info.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Player\Kick.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Player\Toxic.hpp" />
@@ -167,6 +167,7 @@
     <ClInclude Include="src\game\frontend\submenus\Recovery\StatEditor.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\Transactions.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Self.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Self\OutfitEditor.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Self\Weapons.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Settings.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Teleport.hpp" />
@@ -201,6 +202,8 @@
     <ClInclude Include="src\game\gta\invoker\Invoker.hpp" />
     <ClInclude Include="src\game\hooks\Hooks.hpp" />
     <ClInclude Include="src\game\pointers\Pointers.hpp" />
+    <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyContext.hpp" />
+    <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyInterface.hpp" />
     <ClInclude Include="src\types\entity\CDynamicEntity.hpp" />
     <ClInclude Include="src\types\entity\CEntity.hpp" />
     <ClInclude Include="src\types\entity\fwEntity.hpp" />
@@ -456,6 +459,7 @@
     <ClCompile Include="src\game\features\recovery\Heist\DoomsdayHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\PlayAllMissionsSolo.cpp" />
     <ClCompile Include="src\game\features\recovery\RpMultiplier.cpp" />
+    <ClCompile Include="src\game\features\recovery\UnlockGTAPlus.cpp" />
     <ClCompile Include="src\game\features\self\Aimbot.cpp" />
     <ClCompile Include="src\game\features\self\ClearDamage.cpp" />
     <ClCompile Include="src\game\features\self\DisableActionMode.cpp" />
@@ -523,6 +527,7 @@
     <ClCompile Include="src\game\frontend\ESP.cpp" />
     <ClCompile Include="src\game\frontend\GUI.cpp" />
     <ClCompile Include="src\game\frontend\Menu.cpp" />
+    <ClCompile Include="src\game\frontend\Onboarding.cpp" />
     <ClCompile Include="src\game\frontend\Overlay.cpp" />
     <ClCompile Include="src\game\frontend\fonts\MainFont.cpp" />
     <ClCompile Include="src\game\frontend\items\BoolCommandItem.cpp" />
@@ -552,7 +557,6 @@
     <ClCompile Include="src\game\frontend\submenus\Network\SavedPlayers.cpp">
       <ObjectFileName>$(IntDir)\SavedPlayers1.obj</ObjectFileName>
     </ClCompile>
-    <ClCompile Include="src\game\frontend\submenus\OutfitEditor.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Player\Info.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Player\Kick.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Player\Toxic.cpp" />
@@ -579,6 +583,7 @@
     <ClCompile Include="src\game\frontend\submenus\Self.cpp">
       <ObjectFileName>$(IntDir)\Self1.obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Self\OutfitEditor.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Self\Weapons.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Settings.cpp">
       <ObjectFileName>$(IntDir)\Settings1.obj</ObjectFileName>
@@ -606,6 +611,7 @@
     <ClCompile Include="src\game\gta\Stats.cpp" />
     <ClCompile Include="src\game\gta\Vehicle.cpp" />
     <ClCompile Include="src\game\gta\invoker\Invoker.cpp" />
+    <ClCompile Include="src\game\hooks\Anticheat\BattlEyeServerProcessPlayerJoin.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\GetThreadContext.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\HttpStartRequest.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\PrepareMetricForSending.cpp" />

@@ -256,6 +256,9 @@
     <Filter Include="game\frontend\submenus\Self">
       <UniqueIdentifier>{9aec5c05-0f08-4785-b778-8feb5e385484}</UniqueIdentifier>
     </Filter>
+    <Filter Include="types\battleye">
+      <UniqueIdentifier>{64fb56c2-b39d-49b6-bddf-ee8136ad549e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1126,9 +1129,6 @@
     <ClInclude Include="src\game\gta\data\StackSizes.hpp">
       <Filter>game\gta\data</Filter>
     </ClInclude>
-    <ClInclude Include="src\game\frontend\submenus\OutfitEditor.hpp">
-      <Filter>game\frontend\submenus</Filter>
-    </ClInclude>
     <ClInclude Include="src\game\features\vehicle\SavePersonalVehicle.hpp">
       <Filter>game\features\vehicle</Filter>
     </ClInclude>
@@ -1157,6 +1157,18 @@
       <Filter>game\features\self</Filter>
     </ClInclude>
     <ClInclude Include="src\game\frontend\submenus\Self\Weapons.hpp">
+      <Filter>game\frontend\submenus\Self</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\Onboarding.hpp">
+      <Filter>game\frontend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyContext.hpp">
+      <Filter>types\battleye</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyInterface.hpp">
+      <Filter>types\battleye</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Self\OutfitEditor.hpp">
       <Filter>game\frontend\submenus\Self</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1826,9 +1838,6 @@
     <ClCompile Include="src\game\features\world\RiotMode.cpp">
       <Filter>game\features\world</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\frontend\submenus\OutfitEditor.cpp">
-      <Filter>game\frontend\submenus</Filter>
-    </ClCompile>
     <ClCompile Include="src\game\features\network\CheaterPool.cpp">
       <Filter>game\features\network</Filter>
     </ClCompile>
@@ -1902,6 +1911,18 @@
       <Filter>game\features\self</Filter>
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Self\Weapons.cpp">
+      <Filter>game\frontend\submenus\Self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\UnlockGTAPlus.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\Onboarding.cpp">
+      <Filter>game\frontend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Anticheat\BattlEyeServerProcessPlayerJoin.cpp">
+      <Filter>game\hooks\Anticheat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Self\OutfitEditor.cpp">
       <Filter>game\frontend\submenus\Self</Filter>
     </ClCompile>
   </ItemGroup>
