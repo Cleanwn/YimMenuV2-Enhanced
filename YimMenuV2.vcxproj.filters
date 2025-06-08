@@ -259,6 +259,9 @@
     <Filter Include="types\battleye">
       <UniqueIdentifier>{64fb56c2-b39d-49b6-bddf-ee8136ad549e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\hooks\Misc">
+      <UniqueIdentifier>{af450b9b-2fbd-45a2-8dff-92bf9a5b498e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1171,6 +1174,21 @@
     <ClInclude Include="src\game\frontend\submenus\Self\OutfitEditor.hpp">
       <Filter>game\frontend\submenus\Self</Filter>
     </ClInclude>
+    <ClInclude Include="src\core\util\strings.hpp">
+      <Filter>core\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Vehicle\SavedVehicles.hpp">
+      <Filter>game\frontend\submenus\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Vehicle\VehicleEditor.hpp">
+      <Filter>game\frontend\submenus\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\SavedVehicles.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\VehicleModel.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -1924,6 +1942,24 @@
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Self\OutfitEditor.cpp">
       <Filter>game\frontend\submenus\Self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Misc\AssistedAimShouldReleaseEntity.cpp">
+      <Filter>game\hooks\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\SilencePhonecalls.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Vehicle\SavedVehicles.cpp">
+      <Filter>game\frontend\submenus\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Vehicle\VehicleEditor.cpp">
+      <Filter>game\frontend\submenus\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\SavedVehicles.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\VehicleModel.cpp">
+      <Filter>game\gta\data</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
