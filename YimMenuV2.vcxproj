@@ -502,6 +502,7 @@
     <ClCompile Include="src\game\features\system\Chat.cpp" />
     <ClCompile Include="src\game\features\system\DespawnBypass.cpp" />
     <ClCompile Include="src\game\features\system\LSCCustomsBypass.cpp" />
+    <ClCompile Include="src\game\features\teleport\TpToObjective.cpp" />
     <ClCompile Include="src\game\features\teleport\TpToWaypoint.cpp" />
     <ClCompile Include="src\game\features\vehicle\AllowHatsInVehicles.cpp" />
     <ClCompile Include="src\game\features\vehicle\CallMechanic.cpp" />

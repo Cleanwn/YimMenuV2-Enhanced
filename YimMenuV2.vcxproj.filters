@@ -1961,5 +1961,8 @@
     <ClCompile Include="src\game\gta\VehicleModel.cpp">
       <Filter>game\gta\data</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\features\teleport\TpToObjective.cpp">
+      <Filter>game\features\teleport</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
