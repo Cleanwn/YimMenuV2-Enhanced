@@ -1174,9 +1174,6 @@
     <ClInclude Include="src\game\frontend\submenus\Self\OutfitEditor.hpp">
       <Filter>game\frontend\submenus\Self</Filter>
     </ClInclude>
-    <ClInclude Include="src\core\util\strings.hpp">
-      <Filter>core\util</Filter>
-    </ClInclude>
     <ClInclude Include="src\game\frontend\submenus\Vehicle\SavedVehicles.hpp">
       <Filter>game\frontend\submenus\Vehicle</Filter>
     </ClInclude>
@@ -1188,6 +1185,9 @@
     </ClInclude>
     <ClInclude Include="src\game\gta\VehicleModel.hpp">
       <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\util\Strings.hpp">
+      <Filter>core\util</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

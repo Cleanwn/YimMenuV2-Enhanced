@@ -119,7 +119,7 @@
     <ClInclude Include="src\core\util\Joaat.hpp" />
     <ClInclude Include="src\core\util\Math.hpp" />
     <ClInclude Include="src\core\util\RateLimiter.hpp" />
-    <ClInclude Include="src\core\util\strings.hpp" />
+    <ClInclude Include="src\core\util\Strings.hpp" />
     <ClInclude Include="src\core\util\StrToHex.hpp" />
     <ClInclude Include="src\game\backend\AnticheatBypass.hpp" />
     <ClInclude Include="src\game\backend\NativeHooks.hpp" />
