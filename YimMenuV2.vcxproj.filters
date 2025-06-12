@@ -262,6 +262,9 @@
     <Filter Include="game\hooks\Misc">
       <UniqueIdentifier>{af450b9b-2fbd-45a2-8dff-92bf9a5b498e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="types\blip">
+      <UniqueIdentifier>{20723d4b-557b-4771-84dd-cae922403605}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1189,6 +1192,39 @@
     <ClInclude Include="src\core\util\Strings.hpp">
       <Filter>core\util</Filter>
     </ClInclude>
+    <ClInclude Include="src\game\features\recovery\DailyActivities.hpp">
+      <Filter>game\features\recovery</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\DailyActivities.hpp">
+      <Filter>game\frontend\submenus\Recovery</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\blip\BlipSprite.hpp">
+      <Filter>types\blip</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\DailyObjectivesState.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\FreemodeDelivery.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\GPBD_Flow.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\WeeklyChallenge.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\locals\BikeTimeTrialData.hpp">
+      <Filter>types\script\locals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\locals\HSWTimeTrialData.hpp">
+      <Filter>types\script\locals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\locals\RCBanditoTimeTrialData.hpp">
+      <Filter>types\script\locals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\locals\StandardTimeTrialData.hpp">
+      <Filter>types\script\locals</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -1963,6 +1999,24 @@
     </ClCompile>
     <ClCompile Include="src\game\features\teleport\TpToObjective.cpp">
       <Filter>game\features\teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\AllowGenderChange.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\DailyActivities.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\FreeChangeAppearance.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\recovery\NoChangeAppearanceCooldown.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\CollapsingHeaderItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\DailyActivities.cpp">
+      <Filter>game\frontend\submenus\Recovery</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

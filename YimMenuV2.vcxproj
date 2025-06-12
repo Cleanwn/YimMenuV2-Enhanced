@@ -136,6 +136,7 @@
     <ClInclude Include="src\game\backend\Self.hpp" />
     <ClInclude Include="src\game\backend\Tunables.hpp" />
     <ClInclude Include="src\game\commands\PlayerCommand.hpp" />
+    <ClInclude Include="src\game\features\recovery\DailyActivities.hpp" />
     <ClInclude Include="src\game\features\self\OpenGunLocker.hpp" />
     <ClInclude Include="src\game\features\vehicle\SavePersonalVehicle.hpp" />
     <ClInclude Include="src\game\frontend\ChatDisplay.hpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="src\game\frontend\submenus\Player\Troll.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Players.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\DailyActivities.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\ApartmentHeist.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\CayoPericoHeist.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\DiamondCasinoHeist.hpp" />
@@ -209,6 +211,7 @@
     <ClInclude Include="src\game\pointers\Pointers.hpp" />
     <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyContext.hpp" />
     <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyInterface.hpp" />
+    <ClInclude Include="src\types\blip\BlipSprite.hpp" />
     <ClInclude Include="src\types\entity\CDynamicEntity.hpp" />
     <ClInclude Include="src\types\entity\CEntity.hpp" />
     <ClInclude Include="src\types\entity\fwEntity.hpp" />
@@ -328,11 +331,19 @@
     <ClInclude Include="src\types\script\CGameScriptHandlerNetComponent.hpp" />
     <ClInclude Include="src\types\script\CGameScriptId.hpp" />
     <ClInclude Include="src\types\script\CGameScriptObjInfo.hpp" />
+    <ClInclude Include="src\types\script\globals\DailyObjectivesState.hpp" />
+    <ClInclude Include="src\types\script\globals\FreemodeDelivery.hpp" />
     <ClInclude Include="src\types\script\globals\FreemodeGeneral.hpp" />
+    <ClInclude Include="src\types\script\globals\GPBD_Flow.hpp" />
     <ClInclude Include="src\types\script\globals\g_SavedMPGlobals.hpp" />
     <ClInclude Include="src\types\script\globals\MPSV.hpp" />
+    <ClInclude Include="src\types\script\globals\WeeklyChallenge.hpp" />
     <ClInclude Include="src\types\script\GtaThread.hpp" />
     <ClInclude Include="src\types\script\HudColor.hpp" />
+    <ClInclude Include="src\types\script\locals\BikeTimeTrialData.hpp" />
+    <ClInclude Include="src\types\script\locals\HSWTimeTrialData.hpp" />
+    <ClInclude Include="src\types\script\locals\RCBanditoTimeTrialData.hpp" />
+    <ClInclude Include="src\types\script\locals\StandardTimeTrialData.hpp" />
     <ClInclude Include="src\types\script\MPScriptData.hpp" />
     <ClInclude Include="src\types\script\ScriptEvent.hpp" />
     <ClInclude Include="src\types\script\Timer.hpp" />
@@ -457,13 +468,17 @@
     <ClCompile Include="src\game\features\players\troll\DeleteVehicle.cpp" />
     <ClCompile Include="src\game\features\players\troll\SendSext.cpp" />
     <ClCompile Include="src\game\features\players\troll\SetBounty.cpp" />
+    <ClCompile Include="src\game\features\recovery\AllowGenderChange.cpp" />
     <ClCompile Include="src\game\features\recovery\Casino.cpp" />
     <ClCompile Include="src\game\features\recovery\ClaimSafeEarnings.cpp" />
+    <ClCompile Include="src\game\features\recovery\DailyActivities.cpp" />
     <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp" />
+    <ClCompile Include="src\game\features\recovery\FreeChangeAppearance.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\CayoPericoHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\DiamondCasinoHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\DoomsdayHeist.cpp" />
+    <ClCompile Include="src\game\features\recovery\NoChangeAppearanceCooldown.cpp" />
     <ClCompile Include="src\game\features\recovery\PlayAllMissionsSolo.cpp" />
     <ClCompile Include="src\game\features\recovery\RpMultiplier.cpp" />
     <ClCompile Include="src\game\features\recovery\UnlockGTAPlus.cpp" />
@@ -534,6 +549,7 @@
     <ClCompile Include="src\game\frontend\ChatDisplay.cpp" />
     <ClCompile Include="src\game\frontend\ESP.cpp" />
     <ClCompile Include="src\game\frontend\GUI.cpp" />
+    <ClCompile Include="src\game\frontend\items\CollapsingHeaderItem.cpp" />
     <ClCompile Include="src\game\frontend\Menu.cpp" />
     <ClCompile Include="src\game\frontend\Onboarding.cpp" />
     <ClCompile Include="src\game\frontend\Overlay.cpp" />
@@ -573,6 +589,7 @@
       <ObjectFileName>$(IntDir)\Players1.obj</ObjectFileName>
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Recovery.cpp" />
+    <ClCompile Include="src\game\frontend\submenus\Recovery\DailyActivities.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\ApartmentHeist.cpp">
       <ObjectFileName>$(IntDir)\ApartmentHeist1.obj</ObjectFileName>
     </ClCompile>
