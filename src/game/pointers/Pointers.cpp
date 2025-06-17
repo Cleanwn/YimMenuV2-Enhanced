@@ -232,7 +232,7 @@ namespace YimMenu
 			BattlEyeStatusUpdatePatch = BytePatches::Add(ptr.Sub(0x26).As<std::uint8_t*>(), 0xC3);
 		});
 
-		constexpr auto writeNetArrayDataPtrn = Pattern<"0F 84 06 03 00 00 0F B6">("WriteNetArrayData");
+		constexpr auto writeNetArrayDataPtrn = Pattern<"0F 84 06 03 00 00 0F B6 83">("WriteNetArrayData");
 		scanner.Add(writeNetArrayDataPtrn, [this](PointerCalculator ptr) {
 			WriteNetArrayData = ptr.Sub(0x4E).As<PVOID>();
 			NetArrayMgr = ptr.Sub(0x32).Add(3).As<rage::netArrayMgr**>();
@@ -360,7 +360,7 @@ namespace YimMenu
 			SetJoinRequestPoolTypePatch = BytePatches::Add(ptr.Sub(5).As<std::uint8_t*>(), std::to_array<std::uint8_t>({0xB8, 0x00, 0x00, 0x00, 0x00}));
 		});
 
-		constexpr auto handleJoinRequestIgnorePoolPatchPtrn = Pattern<"41 83 FF 05 ? 30 43">("HandleJoinRequestIgnorePoolPatch");
+		constexpr auto handleJoinRequestIgnorePoolPatchPtrn = Pattern<"83 FD 05 ? ? ? 00 00 00 48 8B">("HandleJoinRequestIgnorePoolPatch");
 		scanner.Add(handleJoinRequestIgnorePoolPatchPtrn, [this](PointerCalculator ptr) {
 			HandleJoinRequestIgnorePoolPatch = BytePatches::Add(ptr.Add(4).As<std::uint8_t*>(), 0xEB);
 		});
@@ -395,9 +395,10 @@ namespace YimMenu
 			GameSkeleton = ptr.Add(0x9).Add(3).Rip().As<rage::gameSkeleton*>();
 		});
 
-		constexpr auto SetExplosiveAmmoOnlinePatchPtrn = Pattern<"48 83 EC 28 80 3D ? ? ? ? 00 0F 85 ? ? ? ? E9 ? ? ? ? 48 8B 45 28">("SetExplosiveAmmoOnlinePatch");
-		scanner.Add(SetExplosiveAmmoOnlinePatchPtrn, [this](PointerCalculator ptr) {
-			BytePatches::Add(ptr.Add(0xB).As<std::uint16_t*>(), 0x04EB)->Apply();
+		constexpr auto anticheatInitializedHashPtrn = Pattern<"89 9E C8 00 00 00 48 8B 0D ? ? ? ? 48 85 C9 74 46">("AnticheatInitializedHash");
+		scanner.Add(anticheatInitializedHashPtrn, [this](PointerCalculator ptr) {
+			AnticheatInitializedHash = ptr.Add(9).Rip().As<rage::Obf32**>();
+			GetAnticheatInitializedHash = ptr.Add(0x13).Rip().As<PVOID>();
 		});
 
 		if (!scanner.Scan())
