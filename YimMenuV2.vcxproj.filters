@@ -2018,5 +2018,8 @@
     <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash.cpp">
       <Filter>game\hooks\Anticheat</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\frontend\fonts\IconFont.cpp">
+      <Filter>game\frontend\fonts</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

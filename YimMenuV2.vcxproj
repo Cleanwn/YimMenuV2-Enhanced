@@ -548,6 +548,7 @@
     <ClCompile Include="src\game\features\world\Weather.cpp" />
     <ClCompile Include="src\game\frontend\ChatDisplay.cpp" />
     <ClCompile Include="src\game\frontend\ESP.cpp" />
+    <ClCompile Include="src\game\frontend\fonts\IconFont.cpp" />
     <ClCompile Include="src\game\frontend\GUI.cpp" />
     <ClCompile Include="src\game\frontend\items\CollapsingHeaderItem.cpp" />
     <ClCompile Include="src\game\frontend\Menu.cpp" />
