@@ -561,7 +561,6 @@
     <ClCompile Include="src\game\frontend\items\ConditionalItem.cpp" />
     <ClCompile Include="src\game\frontend\items\FloatCommandItem.cpp" />
     <ClCompile Include="src\game\frontend\items\Group.cpp" />
-    <ClCompile Include="src\game\frontend\items\HotkeySetter.cpp" />
     <ClCompile Include="src\game\frontend\items\ImGuiItem.cpp" />
     <ClCompile Include="src\game\frontend\items\InputTextWithHint.cpp" />
     <ClCompile Include="src\game\frontend\items\IntCommandItem.cpp" />
@@ -640,6 +639,7 @@
     <ClCompile Include="src\game\gta\invoker\Invoker.cpp" />
     <ClCompile Include="src\game\gta\VehicleModel.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\BattlEyeServerProcessPlayerJoin.cpp" />
+    <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\GetThreadContext.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\HttpStartRequest.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\PrepareMetricForSending.cpp" />

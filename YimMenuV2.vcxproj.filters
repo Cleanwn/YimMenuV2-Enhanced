@@ -1621,9 +1621,6 @@
     <ClCompile Include="src\game\frontend\items\Group.cpp">
       <Filter>game\frontend\items</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\frontend\items\HotkeySetter.cpp">
-      <Filter>game\frontend\items</Filter>
-    </ClCompile>
     <ClCompile Include="src\game\frontend\items\ImGuiItem.cpp">
       <Filter>game\frontend\items</Filter>
     </ClCompile>
@@ -2017,6 +2014,9 @@
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Recovery\DailyActivities.cpp">
       <Filter>game\frontend\submenus\Recovery</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash.cpp">
+      <Filter>game\hooks\Anticheat</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
