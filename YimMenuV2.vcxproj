@@ -209,6 +209,7 @@
     <ClInclude Include="src\game\gta\VehicleModel.hpp" />
     <ClInclude Include="src\game\hooks\Hooks.hpp" />
     <ClInclude Include="src\game\pointers\Pointers.hpp" />
+    <ClInclude Include="src\types\anticheat\CAnticheatContext.hpp" />
     <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyContext.hpp" />
     <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyInterface.hpp" />
     <ClInclude Include="src\types\blip\BlipSprite.hpp" />
@@ -216,6 +217,7 @@
     <ClInclude Include="src\types\entity\CEntity.hpp" />
     <ClInclude Include="src\types\entity\fwEntity.hpp" />
     <ClInclude Include="src\types\fx\ExplosionType.hpp" />
+    <ClInclude Include="src\types\game_files\CGameDataHash.hpp" />
     <ClInclude Include="src\types\netshop\CNetShopTransaction.hpp" />
     <ClInclude Include="src\types\netshop\netCatalogBaseItem.hpp" />
     <ClInclude Include="src\types\network\CNetGamePlayer.hpp" />
@@ -641,6 +643,7 @@
     <ClCompile Include="src\game\gta\VehicleModel.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\BattlEyeServerProcessPlayerJoin.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash.cpp" />
+    <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash2.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\GetThreadContext.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\HttpStartRequest.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\PrepareMetricForSending.cpp" />

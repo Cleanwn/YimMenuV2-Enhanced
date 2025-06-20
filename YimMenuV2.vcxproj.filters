@@ -265,6 +265,12 @@
     <Filter Include="types\blip">
       <UniqueIdentifier>{20723d4b-557b-4771-84dd-cae922403605}</UniqueIdentifier>
     </Filter>
+    <Filter Include="types\anticheat">
+      <UniqueIdentifier>{ba73bbbb-9f8f-47d7-88a6-37dd3af3efe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="types\game_files">
+      <UniqueIdentifier>{aac0e85d-e478-44b3-b6f3-579837812007}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1225,6 +1231,12 @@
     <ClInclude Include="src\types\script\locals\StandardTimeTrialData.hpp">
       <Filter>types\script\locals</Filter>
     </ClInclude>
+    <ClInclude Include="src\types\anticheat\CAnticheatContext.hpp">
+      <Filter>types\anticheat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\game_files\CGameDataHash.hpp">
+      <Filter>types\game_files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -2020,6 +2032,9 @@
     </ClCompile>
     <ClCompile Include="src\game\frontend\fonts\IconFont.cpp">
       <Filter>game\frontend\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash2.cpp">
+      <Filter>game\hooks\Anticheat</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
