@@ -271,6 +271,21 @@
     <Filter Include="types\game_files">
       <UniqueIdentifier>{aac0e85d-e478-44b3-b6f3-579837812007}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\frontend\manager\styles">
+      <UniqueIdentifier>{1c262ef9-382b-40f0-8265-929ebc5dc515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\frontend\manager\styles\Classic">
+      <UniqueIdentifier>{8935cd2a-e58b-42e1-8a3a-b0070d1e2aad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\frontend\manager\styles\Modern">
+      <UniqueIdentifier>{8c5de193-1668-408b-819e-e7940feae31b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\frontend\manager\styles\ModernVertical">
+      <UniqueIdentifier>{79ccae5f-6a5b-4c0d-b4c2-75299cf65297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\frontend\submenus\Settings">
+      <UniqueIdentifier>{bcf77a0a-24c0-4d40-b94d-dfe25d3b135a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1237,6 +1252,12 @@
     <ClInclude Include="src\types\game_files\CGameDataHash.hpp">
       <Filter>types\game_files</Filter>
     </ClInclude>
+    <ClInclude Include="src\core\frontend\manager\styles\Themes.hpp">
+      <Filter>core\frontend\manager\styles</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\items\DrawHotkey.hpp">
+      <Filter>game\frontend\items</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -2035,6 +2056,33 @@
     </ClCompile>
     <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash2.cpp">
       <Filter>game\hooks\Anticheat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\world\EnableCreatorDevMode.cpp">
+      <Filter>game\features\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\InfiniteSpecialAbility.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\MeleeDamage.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\MpSpecialAbility.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\WeaponDamage.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\manager\styles\Classic\Classic.cpp">
+      <Filter>core\frontend\manager\styles\Classic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\manager\styles\Modern\Modern.cpp">
+      <Filter>core\frontend\manager\styles\Modern</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\manager\styles\ModernVertical\ModernVertical.cpp">
+      <Filter>core\frontend\manager\styles\ModernVertical</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\DrawHotkey.cpp">
+      <Filter>game\frontend\items</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

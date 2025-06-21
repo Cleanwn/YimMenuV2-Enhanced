@@ -81,6 +81,7 @@
     <ClInclude Include="src\core\filemgr\File.hpp" />
     <ClInclude Include="src\core\filemgr\FileMgr.hpp" />
     <ClInclude Include="src\core\filemgr\Folder.hpp" />
+    <ClInclude Include="src\core\frontend\manager\styles\Themes.hpp" />
     <ClInclude Include="src\core\frontend\Notifications.hpp" />
     <ClInclude Include="src\core\frontend\manager\Category.hpp" />
     <ClInclude Include="src\core\frontend\manager\Submenu.hpp" />
@@ -142,6 +143,7 @@
     <ClInclude Include="src\game\frontend\ChatDisplay.hpp" />
     <ClInclude Include="src\game\frontend\ESP.hpp" />
     <ClInclude Include="src\game\frontend\GUI.hpp" />
+    <ClInclude Include="src\game\frontend\items\DrawHotkey.hpp" />
     <ClInclude Include="src\game\frontend\Menu.hpp" />
     <ClInclude Include="src\game\frontend\Onboarding.hpp" />
     <ClInclude Include="src\game\frontend\Overlay.hpp" />
@@ -407,6 +409,9 @@
     <ClCompile Include="src\core\filemgr\File.cpp" />
     <ClCompile Include="src\core\filemgr\FileMgr.cpp" />
     <ClCompile Include="src\core\filemgr\Folder.cpp" />
+    <ClCompile Include="src\core\frontend\manager\styles\Classic\Classic.cpp" />
+    <ClCompile Include="src\core\frontend\manager\styles\ModernVertical\ModernVertical.cpp" />
+    <ClCompile Include="src\core\frontend\manager\styles\Modern\Modern.cpp" />
     <ClCompile Include="src\core\frontend\Notifications.cpp" />
     <ClCompile Include="src\core\frontend\manager\Category.cpp" />
     <ClCompile Include="src\core\frontend\manager\Submenu.cpp" />
@@ -498,9 +503,12 @@
     <ClCompile Include="src\game\features\self\InfiniteAmmo.cpp" />
     <ClCompile Include="src\game\features\self\InfiniteClip.cpp" />
     <ClCompile Include="src\game\features\self\InfiniteParachutes.cpp" />
+    <ClCompile Include="src\game\features\self\InfiniteSpecialAbility.cpp" />
     <ClCompile Include="src\game\features\self\Invis.cpp" />
     <ClCompile Include="src\game\features\self\KeepPlayerClean.cpp" />
+    <ClCompile Include="src\game\features\self\MeleeDamage.cpp" />
     <ClCompile Include="src\game\features\self\MobileRadio.cpp" />
+    <ClCompile Include="src\game\features\self\MpSpecialAbility.cpp" />
     <ClCompile Include="src\game\features\self\NoIdleKick.cpp" />
     <ClCompile Include="src\game\features\self\NoRagdoll.cpp" />
     <ClCompile Include="src\game\features\self\Noclip.cpp" />
@@ -516,6 +524,7 @@
     <ClCompile Include="src\game\features\self\SuperRun.cpp" />
     <ClCompile Include="src\game\features\self\UnlimitedOxygen.cpp" />
     <ClCompile Include="src\game\features\self\Wanted.cpp" />
+    <ClCompile Include="src\game\features\self\WeaponDamage.cpp" />
     <ClCompile Include="src\game\features\system\Chat.cpp" />
     <ClCompile Include="src\game\features\system\DespawnBypass.cpp" />
     <ClCompile Include="src\game\features\system\LSCCustomsBypass.cpp" />
@@ -539,6 +548,7 @@
     </ClCompile>
     <ClCompile Include="src\game\features\world\CopsDispatch.cpp" />
     <ClCompile Include="src\game\features\world\Delete.cpp" />
+    <ClCompile Include="src\game\features\world\EnableCreatorDevMode.cpp" />
     <ClCompile Include="src\game\features\world\IPLManager.cpp" />
     <ClCompile Include="src\game\features\world\Kill.cpp">
       <ObjectFileName>$(IntDir)\Kill1.obj</ObjectFileName>
@@ -553,6 +563,7 @@
     <ClCompile Include="src\game\frontend\fonts\IconFont.cpp" />
     <ClCompile Include="src\game\frontend\GUI.cpp" />
     <ClCompile Include="src\game\frontend\items\CollapsingHeaderItem.cpp" />
+    <ClCompile Include="src\game\frontend\items\DrawHotkey.cpp" />
     <ClCompile Include="src\game\frontend\Menu.cpp" />
     <ClCompile Include="src\game\frontend\Onboarding.cpp" />
     <ClCompile Include="src\game\frontend\Overlay.cpp" />
