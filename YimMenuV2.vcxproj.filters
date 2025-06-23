@@ -289,6 +289,9 @@
     <Filter Include="game\hooks\Matchmaking">
       <UniqueIdentifier>{55e42314-f4ab-41b6-896c-b80bc83b3b91}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\frontend\submenus\World">
+      <UniqueIdentifier>{fc16ccf1-4c12-471d-8f09-6d8c2b3a64f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1276,6 +1279,15 @@
     <ClInclude Include="src\types\network\rlSessionDetail.hpp">
       <Filter>types\network</Filter>
     </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\World\SpawnPed.hpp">
+      <Filter>game\frontend\submenus\World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\PedModels.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\ped\PedCombatAttribute.hpp">
+      <Filter>types\ped</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -2122,6 +2134,9 @@
     </ClCompile>
     <ClCompile Include="src\game\hooks\Matchmaking\MatchmakingUpdate.cpp">
       <Filter>game\hooks\Matchmaking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\World\SpawnPed.cpp">
+      <Filter>game\frontend\submenus\World</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
