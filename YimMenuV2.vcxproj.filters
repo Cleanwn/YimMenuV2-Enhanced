@@ -286,6 +286,9 @@
     <Filter Include="game\frontend\submenus\Settings">
       <UniqueIdentifier>{bcf77a0a-24c0-4d40-b94d-dfe25d3b135a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game\hooks\Matchmaking">
+      <UniqueIdentifier>{55e42314-f4ab-41b6-896c-b80bc83b3b91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1258,6 +1261,21 @@
     <ClInclude Include="src\game\frontend\items\DrawHotkey.hpp">
       <Filter>game\frontend\items</Filter>
     </ClInclude>
+    <ClInclude Include="src\game\backend\CustomMatchmaking.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\MatchmakingAttributes.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\MatchmakingId.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\rlSessionConfig.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\rlSessionDetail.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -2083,6 +2101,27 @@
     </ClCompile>
     <ClCompile Include="src\game\frontend\items\DrawHotkey.cpp">
       <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\CustomMatchmaking.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\teleport\SendToInterior.cpp">
+      <Filter>game\features\players\teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\teleport\SendToProperty.cpp">
+      <Filter>game\features\players\teleport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Matchmaking\MatchmakingAdvertise.cpp">
+      <Filter>game\hooks\Matchmaking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Matchmaking\MatchmakingSessionDetailSendResponse.cpp">
+      <Filter>game\hooks\Matchmaking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Matchmaking\MatchmakingUnadvertise.cpp">
+      <Filter>game\hooks\Matchmaking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\Matchmaking\MatchmakingUpdate.cpp">
+      <Filter>game\hooks\Matchmaking</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
