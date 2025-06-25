@@ -1522,9 +1522,6 @@
     <ClCompile Include="src\game\features\players\troll\SetBounty.cpp">
       <Filter>game\features\players\troll</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp">
-      <Filter>game\features\recovery</Filter>
-    </ClCompile>
     <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp">
       <Filter>game\features\recovery\Heist</Filter>
     </ClCompile>
@@ -2137,6 +2134,12 @@
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\World\SpawnPed.cpp">
       <Filter>game\frontend\submenus\World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\network\ForceThunder.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\toxic\Blackscreen.cpp">
+      <Filter>game\features\players\toxic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

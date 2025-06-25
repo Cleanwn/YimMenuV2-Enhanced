@@ -463,6 +463,7 @@
     <ClCompile Include="src\game\features\network\DisableDeathBarriers.cpp" />
     <ClCompile Include="src\game\features\network\FastJoin.cpp" />
     <ClCompile Include="src\game\features\network\ForceScriptHost.cpp" />
+    <ClCompile Include="src\game\features\network\ForceThunder.cpp" />
     <ClCompile Include="src\game\features\network\HarassPlayers.cpp" />
     <ClCompile Include="src\game\features\network\JoinSession.cpp" />
     <ClCompile Include="src\game\features\network\PauseGame.cpp" />
@@ -479,6 +480,7 @@
     <ClCompile Include="src\game\features\players\teleport\SendToProperty.cpp" />
     <ClCompile Include="src\game\features\players\teleport\TeleportToCoord.cpp" />
     <ClCompile Include="src\game\features\players\teleport\TeleportToPlayer.cpp" />
+    <ClCompile Include="src\game\features\players\toxic\Blackscreen.cpp" />
     <ClCompile Include="src\game\features\players\toxic\CeoKick.cpp" />
     <ClCompile Include="src\game\features\players\toxic\Explode.cpp" />
     <ClCompile Include="src\game\features\players\toxic\Kill.cpp" />
@@ -490,7 +492,6 @@
     <ClCompile Include="src\game\features\recovery\Casino.cpp" />
     <ClCompile Include="src\game\features\recovery\ClaimSafeEarnings.cpp" />
     <ClCompile Include="src\game\features\recovery\DailyActivities.cpp" />
-    <ClCompile Include="src\game\features\recovery\ForceLaunchHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\FreeChangeAppearance.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\ApartmentHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\CayoPericoHeist.cpp" />
