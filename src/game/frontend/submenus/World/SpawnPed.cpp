@@ -8,6 +8,7 @@
 #include "types/ped/PedCombatAttribute.hpp"
 #include "game/gta/data/Weapons.hpp"
 #include "game/gta/Scripts.hpp"
+#include "game/backend/NativeHooks.hpp"
 
 namespace YimMenu::Submenus
 {
@@ -21,6 +22,8 @@ namespace YimMenu::Submenus
 		static bool spawnAsCop;
 		static bool giveAllWeapons;
 		static bool spawnAsProstitute;
+		static bool randomizeOutfit;
+		static bool blipPed;
 		static std::vector<Ped> spawnedPeds;
 
 		menu->AddItem(std::make_unique<ImGuiItem>([] {
@@ -46,13 +49,19 @@ namespace YimMenu::Submenus
 						ImGui::PushID(name);
 						if (ImGui::Selectable(name))
 						{
-							FiberPool::Push([name] {
+							auto set_player = ImGui::GetIO().KeyCtrl;
+							FiberPool::Push([name, set_player] {
 								auto hash = Joaat(name);
 								auto handle = Ped::Create(hash, Self::GetPed().GetPosition(), Self::GetPed().GetHeading());
+
+								if (!handle)
+									return;
 
 								handle.SetCombatAttribute(PedCombatAttribute::AlwaysFight, true);
 								handle.SetCombatAttribute(PedCombatAttribute::DisableAllRandomsFlee, true);
 								handle.SetCombatAttribute(PedCombatAttribute::DisableFleeFromCombat, true);
+								handle.SetCombatAttribute(PedCombatAttribute::AlwaysFlee, false);
+								handle.SetCombatAttribute(PedCombatAttribute::FleesFromInvincibleOpponents, false);
 								handle.SetCombatAttribute(PedCombatAttribute::CanUseVehicles, true);
 								handle.SetCombatAttribute(PedCombatAttribute::CanLeaveVehicle, true);
 
@@ -62,7 +71,7 @@ namespace YimMenu::Submenus
 								if (spawnDead)
 									handle.Kill();
 
-								if (spawnAsBodyguard)
+								if (spawnAsBodyguard && !set_player)
 								{
 									handle.SetCombatAttribute(PedCombatAttribute::CanCharge, true);
 									handle.SetCombatAttribute(PedCombatAttribute::CanCommandeerVehicles, true);
@@ -71,7 +80,6 @@ namespace YimMenu::Submenus
 									handle.SetCombatAttribute(PedCombatAttribute::PerfectAccuracy, true);
 									handle.SetCombatAttribute(PedCombatAttribute::UseVehicleAttack, true);
 									handle.SetCombatAttribute(PedCombatAttribute::CanDoDrivebys, true);
-									handle.SetCombatAttribute(PedCombatAttribute::FleesFromInvincibleOpponents, false);
 									handle.SetCombatAttribute(PedCombatAttribute::CanThrowSmokeGrenade, true);
 									handle.SetCombatAttribute(PedCombatAttribute::CanSeeUnderwaterPeds, true);
 									
@@ -93,6 +101,14 @@ namespace YimMenu::Submenus
 										handle.GiveWeapon(hash);
 								}
 
+								if (randomizeOutfit)
+									handle.RandomizeOutfit();
+
+								if (blipPed)
+								{
+									HUD::SET_BLIP_COLOUR(HUD::ADD_BLIP_FOR_ENTITY(handle.GetHandle()), 3);
+								}
+
 								if (spawnAsProstitute)
 								{
 									handle.StartScenario("WORLD_HUMAN_PROSTITUTE_HIGH_CLASS");
@@ -100,12 +116,46 @@ namespace YimMenu::Submenus
 
 									if (!*Pointers.IsSessionStarted)
 									{
-										PED_INDEX ped = handle.GetHandle();
+										int ped = handle.GetHandle();
 										Scripts::StartScript("pb_prostitute"_J, eStackSizes::FRIEND, &ped, 1);
 									}
 								}
 
-								spawnedPeds.push_back(handle);
+								if (set_player)
+								{
+									static auto hooked = []()
+									{
+										NativeHooks::AddHook("freemode"_J, NativeIndex::GET_ENTITY_MODEL, [](rage::scrNativeCallContext* ctx) {
+											auto model = ENTITY::GET_ENTITY_MODEL(ctx->GetArg<int>(0));
+
+											if (ctx->GetArg<int>(0) == Self::GetPed().GetHandle() && (model != "mp_m_freemode_01"_J && model != "mp_f_freemode_01"_J))
+											{
+												return ctx->SetReturnValue("mp_m_freemode_01"_J);
+											}
+
+											return ctx->SetReturnValue(model);
+										});
+										for (auto script : {"main"_J, "respawn_controller"_J, "pi_menu"_J})
+										{
+											NativeHooks::AddHook(script, NativeIndex::GET_ENTITY_MODEL, [](rage::scrNativeCallContext* ctx) {
+												auto model = ENTITY::GET_ENTITY_MODEL(ctx->GetArg<int>(0));
+
+												if (ctx->GetArg<int>(0) == Self::GetPed().GetHandle() && (model != "player_zero"_J && model != "player_one"_J && model != "player_two"_J))
+												{
+													return ctx->SetReturnValue("player_zero"_J);
+												}
+
+												return ctx->SetReturnValue(model);
+											}); 
+										}
+										return true;
+									}();
+									Self::GetPlayer().SetPed(handle);
+								}
+								else
+								{
+									spawnedPeds.push_back(handle);
+								}
 							});
 						}
 						ImGui::PopID();
@@ -117,12 +167,15 @@ namespace YimMenu::Submenus
 
 			ImGui::SameLine();
 			ImGui::BeginGroup();
+			ImGui::BulletText("Ctrl+Click to set player model");
 			ImGui::Checkbox("Invincible", &invincible);
 			ImGui::Checkbox("Spawn Dead", &spawnDead);
 			ImGui::Checkbox("Spawn As Bodyguard", &spawnAsBodyguard);
 			ImGui::Checkbox("Spawn As Cop", &spawnAsCop);
 			ImGui::Checkbox("Give All Weapons", &giveAllWeapons);
 			ImGui::Checkbox("Spawn As Prostitute", &spawnAsProstitute);
+			ImGui::Checkbox("Randomize Outfit", &randomizeOutfit);
+			ImGui::Checkbox("Blip Ped", &blipPed);
 			if (ImGui::Button("Remove All"))
 			{
 				FiberPool::Push([] {
