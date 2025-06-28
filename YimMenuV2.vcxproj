@@ -40,7 +40,7 @@
       <PrecompiledHeaderFile>common.hpp</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;IMGUI_DEFINE_MATH_OPERATORS;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)include\json-src\single_include;$(SolutionDir)include\imgui-src;$(SolutionDir)include\minhook-src\src\hde;$(SolutionDir)include\minhook-src\include;$(SolutionDir)include\asynclogger-src\src;$(SolutionDir)include\asynclogger-src\include;$(SolutionDir)include\fmtlib-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)include\json-src\single_include;$(SolutionDir)include\imgui-src;$(SolutionDir)include\minhook-src\src\hde;$(SolutionDir)include\minhook-src\include;$(SolutionDir)include\asynclogger-src\src;$(SolutionDir)include\asynclogger-src\include;$(SolutionDir)include\fmtlib-src\include;$(SolutionDir)include\luajit-src\src;$(SolutionDir)include\luajit-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>common.hpp</ForcedIncludeFiles>
       <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>MaxSpeed</Optimization>
@@ -56,7 +56,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)lib\minhook.x64.lib;$(SolutionDir)lib\AsyncLogger.lib;$(SolutionDir)lib\imgui.lib;$(SolutionDir)lib\fmtlib.lib;dbghelp.lib;d3dcompiler.lib;dwmapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)lib\minhook.x64.lib;$(SolutionDir)lib\AsyncLogger.lib;$(SolutionDir)lib\imgui.lib;$(SolutionDir)lib\fmtlib.lib;$(SolutionDir)lib\luajit.lib;dbghelp.lib;d3dcompiler.lib;dwmapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -115,6 +115,11 @@
     <ClInclude Include="src\core\memory\PatternScanner.hpp" />
     <ClInclude Include="src\core\memory\PointerCalculator.hpp" />
     <ClInclude Include="src\core\renderer\Renderer.hpp" />
+    <ClInclude Include="src\core\scripting\LatentFunction.hpp" />
+    <ClInclude Include="src\core\scripting\LuaLibrary.hpp" />
+    <ClInclude Include="src\core\scripting\LuaManager.hpp" />
+    <ClInclude Include="src\core\scripting\LuaScript.hpp" />
+    <ClInclude Include="src\core\scripting\LuaUtils.hpp" />
     <ClInclude Include="src\core\settings\IStateSerializer.hpp" />
     <ClInclude Include="src\core\settings\Settings.hpp" />
     <ClInclude Include="src\core\util\Joaat.hpp" />
@@ -177,6 +182,7 @@
     <ClInclude Include="src\game\frontend\submenus\Self\OutfitEditor.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Self\Weapons.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Settings.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Settings\LuaScripts.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Teleport.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Vehicle.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Vehicle\SavedVehicles.hpp" />
@@ -184,6 +190,7 @@
     <ClInclude Include="src\game\frontend\submenus\Vehicle\VehicleEditor.hpp" />
     <ClInclude Include="src\game\frontend\submenus\World.hpp" />
     <ClInclude Include="src\game\frontend\submenus\World\SpawnPed.hpp" />
+    <ClInclude Include="src\game\gta\data\LauncherScripts.hpp" />
     <ClInclude Include="src\game\gta\data\PedModels.hpp" />
     <ClInclude Include="src\game\gta\data\ScriptNames.hpp" />
     <ClInclude Include="src\game\gta\data\StackSizes.hpp" />
@@ -214,6 +221,8 @@
     <ClInclude Include="src\game\gta\VehicleModel.hpp" />
     <ClInclude Include="src\game\hooks\Hooks.hpp" />
     <ClInclude Include="src\game\pointers\Pointers.hpp" />
+    <ClInclude Include="src\game\scripting\libraries\Entity.hpp" />
+    <ClInclude Include="src\game\scripting\libraries\NativeDefs.hpp" />
     <ClInclude Include="src\types\anticheat\CAnticheatContext.hpp" />
     <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyContext.hpp" />
     <ClInclude Include="src\types\battleye\CBattlEyePlayerModifyInterface.hpp" />
@@ -348,12 +357,14 @@
     <ClInclude Include="src\types\script\globals\FreemodeGeneral.hpp" />
     <ClInclude Include="src\types\script\globals\GPBD_Flow.hpp" />
     <ClInclude Include="src\types\script\globals\g_SavedMPGlobals.hpp" />
+    <ClInclude Include="src\types\script\globals\LauncherServerData.hpp" />
     <ClInclude Include="src\types\script\globals\MPSV.hpp" />
     <ClInclude Include="src\types\script\globals\WeeklyChallenge.hpp" />
     <ClInclude Include="src\types\script\GtaThread.hpp" />
     <ClInclude Include="src\types\script\HudColor.hpp" />
     <ClInclude Include="src\types\script\locals\BikeTimeTrialData.hpp" />
     <ClInclude Include="src\types\script\locals\HSWTimeTrialData.hpp" />
+    <ClInclude Include="src\types\script\locals\LauncherClientData.hpp" />
     <ClInclude Include="src\types\script\locals\RCBanditoTimeTrialData.hpp" />
     <ClInclude Include="src\types\script\locals\StandardTimeTrialData.hpp" />
     <ClInclude Include="src\types\script\MPScriptData.hpp" />
@@ -441,6 +452,16 @@
     <ClCompile Include="src\core\memory\Pattern.cpp" />
     <ClCompile Include="src\core\memory\PatternScanner.cpp" />
     <ClCompile Include="src\core\renderer\Renderer.cpp" />
+    <ClCompile Include="src\core\scripting\LatentFunction.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Default.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Internal.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Logging.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Script.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Util.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Vector3.cpp" />
+    <ClCompile Include="src\core\scripting\LuaLibrary.cpp" />
+    <ClCompile Include="src\core\scripting\LuaManager.cpp" />
+    <ClCompile Include="src\core\scripting\LuaScript.cpp" />
     <ClCompile Include="src\core\settings\IStateSerializer.cpp" />
     <ClCompile Include="src\core\settings\Settings.cpp" />
     <ClCompile Include="src\game\backend\AnticheatBypass.cpp" />
@@ -486,6 +507,8 @@
     <ClCompile Include="src\game\features\players\toxic\Kill.cpp" />
     <ClCompile Include="src\game\features\players\toxic\KillLoopExploit.cpp" />
     <ClCompile Include="src\game\features\players\troll\DeleteVehicle.cpp" />
+    <ClCompile Include="src\game\features\players\troll\SendGooch.cpp" />
+    <ClCompile Include="src\game\features\players\troll\SendPhantomCar.cpp" />
     <ClCompile Include="src\game\features\players\troll\SendSext.cpp" />
     <ClCompile Include="src\game\features\players\troll\SetBounty.cpp" />
     <ClCompile Include="src\game\features\recovery\AllowGenderChange.cpp" />
@@ -551,6 +574,7 @@
     <ClCompile Include="src\game\features\vehicle\Godmode.cpp" />
     <ClCompile Include="src\game\features\vehicle\HornBoost.cpp" />
     <ClCompile Include="src\game\features\vehicle\KeepFixed.cpp" />
+    <ClCompile Include="src\game\features\vehicle\LowerVehicleStance.cpp" />
     <ClCompile Include="src\game\features\vehicle\RocketBoost.cpp" />
     <ClCompile Include="src\game\features\vehicle\SavePersonalVehicle.cpp" />
     <ClCompile Include="src\game\features\vehicle\Seatbelt.cpp" />
@@ -638,6 +662,7 @@
     <ClCompile Include="src\game\frontend\submenus\Settings.cpp">
       <ObjectFileName>$(IntDir)\Settings1.obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Settings\LuaScripts.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Teleport.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Vehicle.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Vehicle\SavedVehicles.cpp" />
@@ -693,6 +718,11 @@
     <ClCompile Include="src\game\hooks\Spoofing\WriteNodeData.cpp" />
     <ClCompile Include="src\game\hooks\Spoofing\WriteSyncTree.cpp" />
     <ClCompile Include="src\game\pointers\Pointers.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Entity.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Invoker.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\NativeDefs.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Natives.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\ScriptGlobal.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\types\network\netGameEvent.cpp" />
     <ClCompile Include="src\types\network\rlGamerHandle.cpp" />

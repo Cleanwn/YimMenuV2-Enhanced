@@ -292,6 +292,18 @@
     <Filter Include="game\frontend\submenus\World">
       <UniqueIdentifier>{fc16ccf1-4c12-471d-8f09-6d8c2b3a64f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\scripting">
+      <UniqueIdentifier>{b410eea1-1673-439f-bfb3-b62c82eb3a28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\scripting\libraries">
+      <UniqueIdentifier>{09cfa621-f25b-4d28-8680-4511fa188c1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\scripting">
+      <UniqueIdentifier>{6911abf6-5d21-4d63-9151-adeab6b664d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\scripting\libraries">
+      <UniqueIdentifier>{75abdd08-acb9-4096-874d-357fec49cae6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common.hpp" />
@@ -1288,6 +1300,39 @@
     <ClInclude Include="src\types\ped\PedCombatAttribute.hpp">
       <Filter>types\ped</Filter>
     </ClInclude>
+    <ClInclude Include="src\core\scripting\LatentFunction.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\scripting\LuaLibrary.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\scripting\LuaManager.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\scripting\LuaScript.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\data\LauncherScripts.hpp">
+      <Filter>game\gta\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\globals\LauncherServerData.hpp">
+      <Filter>types\script\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\script\locals\LauncherClientData.hpp">
+      <Filter>types\script\locals</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Settings\LuaScripts.hpp">
+      <Filter>game\frontend\submenus\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\scripting\LuaUtils.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\scripting\libraries\Entity.hpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\scripting\libraries\NativeDefs.hpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -2140,6 +2185,63 @@
     </ClCompile>
     <ClCompile Include="src\game\features\players\toxic\Blackscreen.cpp">
       <Filter>game\features\players\toxic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\LatentFunction.cpp">
+      <Filter>core\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\LuaLibrary.cpp">
+      <Filter>core\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\LuaManager.cpp">
+      <Filter>core\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\LuaScript.cpp">
+      <Filter>core\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Default.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Internal.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Logging.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Script.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Settings\LuaScripts.cpp">
+      <Filter>game\frontend\submenus\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\troll\SendGooch.cpp">
+      <Filter>game\features\players\troll</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\players\troll\SendPhantomCar.cpp">
+      <Filter>game\features\players\troll</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Util.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Vector3.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Entity.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Invoker.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\NativeDefs.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Natives.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\ScriptGlobal.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\LowerVehicleStance.cpp">
+      <Filter>game\features\vehicle</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
