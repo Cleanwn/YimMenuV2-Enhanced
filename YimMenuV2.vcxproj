@@ -723,6 +723,10 @@
     <ClCompile Include="src\game\scripting\libraries\NativeDefs.cpp" />
     <ClCompile Include="src\game\scripting\libraries\Natives.cpp" />
     <ClCompile Include="src\game\scripting\libraries\ScriptGlobal.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Stats.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Transactions.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Tunables.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Vehicle.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\types\network\netGameEvent.cpp" />
     <ClCompile Include="src\types\network\rlGamerHandle.cpp" />

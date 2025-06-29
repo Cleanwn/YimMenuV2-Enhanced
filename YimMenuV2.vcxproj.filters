@@ -2243,5 +2243,17 @@
     <ClCompile Include="src\game\features\vehicle\LowerVehicleStance.cpp">
       <Filter>game\features\vehicle</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Stats.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Transactions.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Tunables.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Vehicle.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
