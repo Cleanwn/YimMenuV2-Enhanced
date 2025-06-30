@@ -1333,6 +1333,9 @@
     <ClInclude Include="src\game\scripting\libraries\NativeDefs.hpp">
       <Filter>game\scripting\libraries</Filter>
     </ClInclude>
+    <ClInclude Include="src\core\scripting\LuaResource.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -2253,6 +2256,12 @@
       <Filter>game\scripting\libraries</Filter>
     </ClCompile>
     <ClCompile Include="src\game\scripting\libraries\Vehicle.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\LuaResource.cpp">
+      <Filter>core\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Ped.cpp">
       <Filter>game\scripting\libraries</Filter>
     </ClCompile>
   </ItemGroup>

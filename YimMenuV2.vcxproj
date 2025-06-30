@@ -118,6 +118,7 @@
     <ClInclude Include="src\core\scripting\LatentFunction.hpp" />
     <ClInclude Include="src\core\scripting\LuaLibrary.hpp" />
     <ClInclude Include="src\core\scripting\LuaManager.hpp" />
+    <ClInclude Include="src\core\scripting\LuaResource.hpp" />
     <ClInclude Include="src\core\scripting\LuaScript.hpp" />
     <ClInclude Include="src\core\scripting\LuaUtils.hpp" />
     <ClInclude Include="src\core\settings\IStateSerializer.hpp" />
@@ -461,6 +462,7 @@
     <ClCompile Include="src\core\scripting\libraries\Vector3.cpp" />
     <ClCompile Include="src\core\scripting\LuaLibrary.cpp" />
     <ClCompile Include="src\core\scripting\LuaManager.cpp" />
+    <ClCompile Include="src\core\scripting\LuaResource.cpp" />
     <ClCompile Include="src\core\scripting\LuaScript.cpp" />
     <ClCompile Include="src\core\settings\IStateSerializer.cpp" />
     <ClCompile Include="src\core\settings\Settings.cpp" />
@@ -722,6 +724,7 @@
     <ClCompile Include="src\game\scripting\libraries\Invoker.cpp" />
     <ClCompile Include="src\game\scripting\libraries\NativeDefs.cpp" />
     <ClCompile Include="src\game\scripting\libraries\Natives.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Ped.cpp" />
     <ClCompile Include="src\game\scripting\libraries\ScriptGlobal.cpp" />
     <ClCompile Include="src\game\scripting\libraries\Stats.cpp" />
     <ClCompile Include="src\game\scripting\libraries\Transactions.cpp" />
