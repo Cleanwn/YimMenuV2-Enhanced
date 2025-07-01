@@ -525,6 +525,7 @@
     <ClCompile Include="src\game\features\recovery\NoChangeAppearanceCooldown.cpp" />
     <ClCompile Include="src\game\features\recovery\PlayAllMissionsSolo.cpp" />
     <ClCompile Include="src\game\features\recovery\RpMultiplier.cpp" />
+    <ClCompile Include="src\game\features\recovery\SkipNextObjective.cpp" />
     <ClCompile Include="src\game\features\recovery\UnlockGTAPlus.cpp" />
     <ClCompile Include="src\game\features\self\Aimbot.cpp" />
     <ClCompile Include="src\game\features\self\ClearDamage.cpp" />

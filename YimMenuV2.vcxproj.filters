@@ -2264,5 +2264,8 @@
     <ClCompile Include="src\game\scripting\libraries\Ped.cpp">
       <Filter>game\scripting\libraries</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\features\recovery\SkipNextObjective.cpp">
+      <Filter>game\features\recovery</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
