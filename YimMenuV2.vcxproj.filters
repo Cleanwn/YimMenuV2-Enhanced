@@ -1336,6 +1336,18 @@
     <ClInclude Include="src\core\scripting\LuaResource.hpp">
       <Filter>core\scripting</Filter>
     </ClInclude>
+    <ClInclude Include="src\core\scripting\LuaConfig.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\scripting\LuaUserInterface.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\backend\PersonalVehicles.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\util\Wine.hpp">
+      <Filter>core\util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -2263,6 +2275,27 @@
     </ClCompile>
     <ClCompile Include="src\game\scripting\libraries\Ped.cpp">
       <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\LuaConfig.cpp">
+      <Filter>core\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\LuaUserInterface.cpp">
+      <Filter>core\scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Notify.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Network.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\backend\PersonalVehicles.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\DespawnPersonalVehicle.cpp">
+      <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\vehicle\RequestPersonalVehicle.cpp">
+      <Filter>game\features\vehicle</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
