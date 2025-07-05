@@ -43,7 +43,7 @@ namespace YimMenu
 		if (vtable[1] == Pointers.Nullsub)
 			return; // already nopped
 
-		auto new_vtable = new void*[3];
+		auto new_vtable = new void* [3];
 		memcpy(new_vtable, vtable, sizeof(void*) * 3);
 		new_vtable[1] = Pointers.Nullsub;
 		*reinterpret_cast<void***>(element) = new_vtable;
@@ -104,7 +104,7 @@ namespace YimMenu
 	void AnticheatBypass::RunScriptImpl()
 	{
 		DefuseSigscanner();
-		
+
 		NativeHooks::AddHook("shop_controller"_J, NativeIndex::NET_GAMESERVER_BEGIN_SERVICE, &TransactionHook);
 
 		m_IsFSLLoaded = CheckForFSL();
@@ -121,12 +121,16 @@ namespace YimMenu
 
 		if (m_IsFSLLoaded)
 		{
-			HMODULE hFSL = GetModuleHandleA("WINMM.dll");
-			if (hFSL)
+			Module* FSL = nullptr;
+			for (auto& module : ModuleMgr.GetModules())
+				if (module.first == "WINMM.dll"_J && module.second->IsExported("LawnchairGetVersion"))
+					FSL = module.second.get();
+
+			if (FSL)
 			{
-				auto LawnchairGetVersion = reinterpret_cast<FnGetVersion>(GetProcAddress(hFSL, "LawnchairGetVersion"));
-				auto LawnchairIsProvidingLocalSaves = reinterpret_cast<FnLocalSaves>(GetProcAddress(hFSL, "LawnchairIsProvidingLocalSaves"));
-				auto LawnchairIsProvidingBattlEyeBypass = reinterpret_cast<FnBattlEyeBypass>(GetProcAddress(hFSL, "LawnchairIsProvidingBattlEyeBypass"));
+				auto LawnchairGetVersion = FSL->GetExport<FnGetVersion>("LawnchairGetVersion");
+				auto LawnchairIsProvidingLocalSaves = FSL->GetExport<FnLocalSaves>("LawnchairIsProvidingLocalSaves");
+				auto LawnchairIsProvidingBattlEyeBypass = FSL->GetExport<FnBattlEyeBypass>("LawnchairIsProvidingBattlEyeBypass");
 
 				if (LawnchairGetVersion && LawnchairIsProvidingLocalSaves && LawnchairIsProvidingBattlEyeBypass)
 				{

@@ -24,7 +24,7 @@ namespace YimMenu
 
 		/**
 		 * @brief Parses the EAT of the module for the requested symbol name
-		 * 
+		 *
 		 * @param symbolName The function name
 		 * @return void* Function address of the exported function
 		 */
@@ -32,7 +32,7 @@ namespace YimMenu
 		R GetExport(const std::string_view symbolName) const;
 		/**
 		 * @brief Parses the EAT of the module for the requested symbol ordinal
-		 * 
+		 *
 		 * @param ordinal The function ordinal
 		 * @return void* Function address of the exported function
 		 */
@@ -40,7 +40,7 @@ namespace YimMenu
 		R GetExport(const int ordinal) const;
 		/**
 		 * @brief Checks if the module exports a function with the given name
-		 * 
+		 *
 		 * @param symbolName The function name
 		 * @return true If the function is exported
 		 * @return false If the function is not exported
@@ -49,7 +49,7 @@ namespace YimMenu
 		bool IsExported(const std::string_view symbolName) const;
 		/**
 		 * @brief Checks if the module exports a function with the given ordinal
-		 * 
+		 *
 		 * @param ordinal The function ordinal
 		 * @return true If the function is exported
 		 * @return false If the function is not exported
@@ -58,10 +58,10 @@ namespace YimMenu
 		bool IsExported(const int ordinal) const;
 		/**
 		 * @brief Gets the address of the import function
-		 * 
+		 *
 		 * @param moduleName The module to get the import from
 		 * @param symbolName The function name
-		 * @return void** 
+		 * @return void**
 		 */
 		void** GetImport(const std::string_view moduleName, const std::string_view symbolName) const;
 
@@ -119,7 +119,6 @@ namespace YimMenu
 
 	inline bool Module::IsExported(const std::string_view symbolName) const
 	{
-
 		return GetExportImpl<void*, decltype(symbolName)>(symbolName) != nullptr;
 	}
 
@@ -141,14 +140,14 @@ namespace YimMenu
 		const auto ordinalOffsets = m_Base.Add(exportDirectory->AddressOfNameOrdinals).As<uint16_t*>();
 		const auto funcOffsets = m_Base.Add(exportDirectory->AddressOfFunctions).As<DWORD*>();
 
-		for (std::size_t i = 0; i < exportDirectory->NumberOfFunctions; i++)
+		for (std::size_t i = 0; i < exportDirectory->NumberOfNames; i++)
 		{
 			if constexpr (std::is_convertible_v<T, int>)
 			{
-				if (ordinalOffsets[i] != symbol)
+				if (exportDirectory->Base + ordinalOffsets[i] != symbol)
 					continue;
 
-				return m_Base.Add(funcOffsets[i]).As<R>();
+				return m_Base.Add(funcOffsets[ordinalOffsets[i]]).As<R>();
 			}
 			else if constexpr (std::is_convertible_v<T, std::string_view>)
 			{
@@ -156,7 +155,7 @@ namespace YimMenu
 				if (strcmp(functionName, symbol.data()))
 					continue;
 
-				return m_Base.Add(funcOffsets[i]).As<R>();
+				return m_Base.Add(funcOffsets[ordinalOffsets[i]]).As<R>();
 			}
 			else
 			{
