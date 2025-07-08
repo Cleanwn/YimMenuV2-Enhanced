@@ -24,7 +24,7 @@ namespace YimMenu
 
 		/**
 		 * @brief Parses the EAT of the module for the requested symbol name
-		 *
+		 * 
 		 * @param symbolName The function name
 		 * @return void* Function address of the exported function
 		 */
@@ -32,7 +32,7 @@ namespace YimMenu
 		R GetExport(const std::string_view symbolName) const;
 		/**
 		 * @brief Parses the EAT of the module for the requested symbol ordinal
-		 *
+		 * 
 		 * @param ordinal The function ordinal
 		 * @return void* Function address of the exported function
 		 */
@@ -40,7 +40,7 @@ namespace YimMenu
 		R GetExport(const int ordinal) const;
 		/**
 		 * @brief Checks if the module exports a function with the given name
-		 *
+		 * 
 		 * @param symbolName The function name
 		 * @return true If the function is exported
 		 * @return false If the function is not exported
@@ -49,7 +49,7 @@ namespace YimMenu
 		bool IsExported(const std::string_view symbolName) const;
 		/**
 		 * @brief Checks if the module exports a function with the given ordinal
-		 *
+		 * 
 		 * @param ordinal The function ordinal
 		 * @return true If the function is exported
 		 * @return false If the function is not exported
@@ -58,10 +58,10 @@ namespace YimMenu
 		bool IsExported(const int ordinal) const;
 		/**
 		 * @brief Gets the address of the import function
-		 *
+		 * 
 		 * @param moduleName The module to get the import from
 		 * @param symbolName The function name
-		 * @return void**
+		 * @return void** 
 		 */
 		void** GetImport(const std::string_view moduleName, const std::string_view symbolName) const;
 

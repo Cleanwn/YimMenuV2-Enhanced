@@ -1348,6 +1348,18 @@
     <ClInclude Include="src\core\util\Wine.hpp">
       <Filter>core\util</Filter>
     </ClInclude>
+    <ClInclude Include="src\core\util\RainbowColor.hpp">
+      <Filter>core\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\features\self\CustomWeapon.hpp">
+      <Filter>game\features\self</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\gta\RayCast.hpp">
+      <Filter>game\gta</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\entity\DecalTypes.hpp">
+      <Filter>types\entity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\common.cpp" />
@@ -2296,6 +2308,15 @@
     </ClCompile>
     <ClCompile Include="src\game\features\vehicle\RequestPersonalVehicle.cpp">
       <Filter>game\features\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\features\self\CustomWeapon.cpp">
+      <Filter>game\features\self</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\items\TabBarItem.cpp">
+      <Filter>game\frontend\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\gta\RayCast.cpp">
+      <Filter>game\gta</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

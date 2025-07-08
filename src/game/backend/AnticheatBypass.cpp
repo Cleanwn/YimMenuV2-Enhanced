@@ -43,7 +43,7 @@ namespace YimMenu
 		if (vtable[1] == Pointers.Nullsub)
 			return; // already nopped
 
-		auto new_vtable = new void* [3];
+		auto new_vtable = new void*[3];
 		memcpy(new_vtable, vtable, sizeof(void*) * 3);
 		new_vtable[1] = Pointers.Nullsub;
 		*reinterpret_cast<void***>(element) = new_vtable;
@@ -104,7 +104,7 @@ namespace YimMenu
 	void AnticheatBypass::RunScriptImpl()
 	{
 		DefuseSigscanner();
-
+		
 		NativeHooks::AddHook("shop_controller"_J, NativeIndex::NET_GAMESERVER_BEGIN_SERVICE, &TransactionHook);
 
 		m_IsFSLLoaded = CheckForFSL();
