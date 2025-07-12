@@ -33,15 +33,16 @@ namespace YimMenu
 
 	template<typename T>
 	inline DetourHook<T>::DetourHook(const std::string_view name, void* target, T detour) :
-	    BaseHook(name),
-	    m_TargetFunc(target),
-	    m_DetourFunc(reinterpret_cast<void*>(detour)),
-	    m_OriginalFunc(nullptr)
+		BaseHook(name),
+		m_TargetFunc(target),
+		m_DetourFunc(reinterpret_cast<void*>(detour)),
+		m_OriginalFunc(nullptr)
 	{
 		OptimizeHook();
 
 		if (const auto result = MH_CreateHook(m_TargetFunc, m_DetourFunc, &m_OriginalFunc); result != MH_OK)
 		{
+			LOGF(FATAL, "Failed to create hook {}", name);
 			throw std::runtime_error("Failed to create hook!");
 		}
 	}
