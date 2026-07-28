@@ -1,0 +1,18 @@
+*.[oa]
+*.so
+*.obj
+*.lib
+*.exp
+*.dll
+*.exe
+*.manifest
+*.dmp
+*.swp
+.tags
+
+#cmake
+/build/
+/build-*/
+
+#Mac OS junk
+.DS_Store

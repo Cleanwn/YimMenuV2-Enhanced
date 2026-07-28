@@ -8,8 +8,8 @@
 #include "core/frontend/Notifications.hpp"
 #include "game/frontend/items/Items.hpp"
 #include "game/frontend/submenus/Network/SavedPlayers.hpp"
-#include "game/gta/Network.hpp"
 #include "game/frontend/submenus/Network/RandomEvents.hpp"
+#include "game/gta/Network.hpp"
 
 namespace YimMenu::Submenus
 {
@@ -88,7 +88,7 @@ namespace YimMenu::Submenus
 		toxicGroup->AddItem(std::make_shared<CommandItem>("killexploitall"_J, "Permadeath All"));
 		toxicGroup->AddItem(std::make_shared<CommandItem>("explodeall"_J, "Explode All"));
 		toxicGroup->AddItem(std::make_shared<CommandItem>("ceokickall"_J, "CEO Kick All"));
-		toxicGroup->AddItem(std::make_shared<CommandItem>("hkickall"_J, "hostkick for all player"));
+		toxicGroup->AddItem(std::make_shared<CommandItem>("hkickall"_J, "Host Kick All"));
 
 		miscGroup->AddItem(std::make_shared<BoolCommandItem>("forcethunder"_J));
 
@@ -116,6 +116,7 @@ namespace YimMenu::Submenus
 		spoofMMRegion->AddItem(std::make_shared<BoolCommandItem>("spoofmmregion"_J, "Spoof Region"));
 		spoofMMRegion->AddItem(std::make_shared<ConditionalItem>("spoofmmregion"_J, std::make_shared<ListCommandItem>("mmregion"_J, "##mmregion")));
 		matchmakingGroup->AddItem(std::make_shared<ConditionalItem>("cheaterpool"_J, spoofMMRegion, true));
+		matchmakingGroup->AddItem(std::make_shared<BoolCommandItem>("spoofdatahash"_J));
 		spoofing->AddItem(matchmakingGroup);
 
 		auto matchmakingSrvGroup = std::make_shared<Group>("Matchmaking (Server)");

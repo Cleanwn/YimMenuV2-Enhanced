@@ -76,12 +76,11 @@ namespace YimMenu
 	bool Entity::IsValid()
 	{
 		if (m_Handle)
-		{
 			return ENTITY::DOES_ENTITY_EXIST(m_Handle);
-		}
-		else if (m_Pointer)
+
+		if (m_Pointer)
 		{
-			return true; // TODO: potential use after free
+			return Pointers.PtrToHandle(m_Pointer) != 0;
 		}
 
 		return false;
@@ -127,7 +126,7 @@ namespace YimMenu
 		return ENTITY::IS_ENTITY_A_MISSION_ENTITY(GetHandle()); // TODO: detect more mission states
 	}
 
-	int Entity::GetModel()
+	Hash Entity::GetModel()
 	{
 		ENTITY_ASSERT_VALID();
 		return ENTITY::GET_ENTITY_MODEL(GetHandle());

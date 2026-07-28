@@ -18,7 +18,7 @@
 #include "types/script/globals/FreemodeGeneral.hpp"
 #include "types/script/globals/g_SavedMPGlobals.hpp"
 
-#define MAX_GARAGE_NUM 33
+#define MAX_GARAGE_NUM 36
 
 namespace YimMenu
 {
@@ -61,6 +61,9 @@ namespace YimMenu
 		case 30: return 415; // The Vinewood Club Garage
 		case 31: return 515;
 		case 32: return 537;
+		case 33: return 547;
+		case 34: return 567;
+		case 35: return 587;
 		case MAX_GARAGE_NUM + 0: return 156; // Mobile Operations Center
 		case MAX_GARAGE_NUM + 1: return 224; // Nightclub B1
 		case MAX_GARAGE_NUM + 2: return 223; // Terrorbyte
@@ -110,6 +113,10 @@ namespace YimMenu
 		case 26: return 20;
 		case 29: return 50;
 		case 30: return 100; // The Vinewood Club Garage
+		// mansions
+		case 33:
+		case 34:
+		case 35: return 20;
 		}
 
 		return -1;
@@ -152,6 +159,9 @@ namespace YimMenu
 		case 29: stat = "MPX_MULTSTOREY_GAR_OWNED"; break;
 		case 31: stat = "MPX_PROP_BAIL_OFFICE"; break;
 		case 32: stat = "MPX_PROP_HACKER_DEN"; break;
+		case 33: stat = "MPX_MANSION_TH_OWNED"; break;
+		case 34: stat = "MPX_MANSION_AJ_OWNED"; break;
+		case 35: stat = "MPX_MANSION_MD_OWNED"; break;
 		case 30:
 		case MAX_GARAGE_NUM + 0:
 		case MAX_GARAGE_NUM + 1:
@@ -219,6 +229,7 @@ namespace YimMenu
 			case 3: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("MSG_B4"); // Eclipse Blvd Garage B4
 			case 4: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("MSG_B5"); // Eclipse Blvd Garage B5
 			}
+			break;
 		}
 		case 30: // The Vinewood Club Garage
 		{
@@ -231,9 +242,13 @@ namespace YimMenu
 			case 3: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("VPG_B4"); // Basement Level 4
 			case 4: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("VPG_B5"); // Basement Level 5
 			}
+			break;
 		}
 		case 31: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("BO_GARNAME"); // Bail Office
 		case 32: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("HD_GARNAME"); // Garment Factory
+		case 33: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("MG1_GARNAME"); // The Tongva Estate
+		case 34: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("MG2_GARNAME"); // Richman Villa
+		case 35: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("MG3_GARNAME"); // The Vinewood Residence
 		case MAX_GARAGE_NUM + 0: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("GRTRUCK"); // Mobile Operations Center
 		case MAX_GARAGE_NUM + 1: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("MP_BHUB_GAR0"); // Nightclub B1
 		case MAX_GARAGE_NUM + 2: return HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("MP_BHUB_CLUBT"); // Terrorbyte
@@ -249,12 +264,12 @@ namespace YimMenu
 	{
 		m_Model = m_Data->VehicleModel;
 		m_Plate = m_Data->NumberPlateText;
-		m_Name  = std::format("{} ({})", HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(m_Model)), m_Plate);
+		m_Name = std::format("{} ({})##{}", HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(m_Model)), m_Plate, m_Id);
 
 		SetGarage();
 	}
 
-	int PersonalVehicles::PersonalVehicle::GetId()
+	int PersonalVehicles::PersonalVehicle::GetId() const
 	{
 		return m_Id;
 	}
@@ -264,7 +279,7 @@ namespace YimMenu
 		return m_Data;
 	}
 
-	joaat_t PersonalVehicles::PersonalVehicle::GetModel()
+	joaat_t PersonalVehicles::PersonalVehicle::GetModel() const
 	{
 		return m_Model;
 	}
@@ -295,13 +310,13 @@ namespace YimMenu
 				auto garageOffset = GetPropertyGarageOffset(propertyIterator);
 				for (int garageSlotIterator = 1; garageSlotIterator <= garageSize; garageSlotIterator++)
 				{
-					auto itemInSlot = *ScriptGlobal(1940530).At(garageOffset).At(garageSlotIterator).As<int*>() - 1;
+					auto itemInSlot = *ScriptGlobal(1945138).At(garageOffset).At(garageSlotIterator).As<int*>() - 1;
 					if (itemInSlot == m_Id)
 					{
 						auto staticPropertyString = GetStaticPropertyName(propertyIterator, garageSlotIterator);
 						if (staticPropertyString.empty())
 						{
-							m_Garage = HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(ScriptGlobal(1312335).At(propertyStatState, 1951).At(16).As<const char*>());
+							m_Garage = HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(ScriptGlobal(1312440).At(propertyStatState, 1951).At(16).As<const char*>());
 						}
 						else
 						{
@@ -370,7 +385,7 @@ namespace YimMenu
 
 			ScriptMgr::Yield(100ms);
 
-			*ScriptLocal("freemode"_J, 19447).At(176).As<int*>() = 0;
+			*ScriptLocal("freemode"_J, 19672).At(176).As<int*>() = 0;
 
 			if (bring)
 			{

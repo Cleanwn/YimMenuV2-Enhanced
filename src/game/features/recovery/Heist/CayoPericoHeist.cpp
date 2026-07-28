@@ -30,7 +30,7 @@ namespace YimMenu::Features
 
 			virtual void OnCall() override
 			{
-				auto base = ScriptGlobal(1975799).At(831).At(56);
+				auto base = ScriptGlobal(1980570).At(831).At(56);
 
 				*base.At(0, 1).As<int*>() = _CayoPericoHeistCut1.GetState();
 				*base.At(1, 1).As<int*>() = _CayoPericoHeistCut2.GetState();
@@ -45,7 +45,7 @@ namespace YimMenu::Features
 
 			virtual void OnCall() override
 			{
-				auto base = ScriptGlobal(1976911);
+				auto base = ScriptGlobal(1973762);
 
 				for (int i = 0; i <= 3; i++)
 				{
@@ -128,7 +128,7 @@ namespace YimMenu::Features
 				ScriptMgr::Yield(500ms);
 
 				if (auto thread = Scripts::FindScriptThread("heist_island_planning"_J))
-					*ScriptLocal(thread, 1568).As<int*>() = 2;
+					*ScriptLocal(thread, 1580).As<int*>() = 2;
 			}
 		};
 
@@ -200,7 +200,7 @@ namespace YimMenu::Features
 			virtual void OnCall() override
 			{
 				if (auto thread = Scripts::FindScriptThread("fm_mission_controller_2020"_J))
-					*ScriptLocal(thread, 58222).At(1357).At(53).As<int*>() = _CayoPericoHeistSecondaryTakeValue.GetState();
+					*ScriptLocal(thread, 59986).At(1376).At(53).As<int*>() = _CayoPericoHeistSecondaryTakeValue.GetState();
 			}
 		};
 
@@ -211,7 +211,7 @@ namespace YimMenu::Features
 			virtual void OnCall() override
 			{
 				if (auto thread = Scripts::FindScriptThread("fm_mission_controller_2020"_J))
-					*ScriptLocal(thread, 25460).As<int*>() = 5;
+					*ScriptLocal(thread, 26619).As<int*>() = 5;
 			}
 		};
 
@@ -222,7 +222,7 @@ namespace YimMenu::Features
 			virtual void OnCall() override
 			{
 				if (auto thread = Scripts::FindScriptThread("fm_mission_controller_2020"_J))
-					*ScriptLocal(thread, 30285).As<int*>() = 6;
+					*ScriptLocal(thread, 31511).As<int*>() = 6;
 			}
 		};
 
@@ -233,7 +233,7 @@ namespace YimMenu::Features
 			virtual void OnCall() override
 			{
 				if (auto thread = Scripts::FindScriptThread("fm_mission_controller_2020"_J))
-					*ScriptLocal(thread, 31525).At(3).As<float*>() = 100.0f;
+					*ScriptLocal(thread, 32751).At(3).As<float*>() = 100.0f;
 			}
 		};
 
@@ -263,12 +263,12 @@ namespace YimMenu::Features
 						case 1:
 						case 3:
 						case 5:
-							*ScriptLocal(thread, 31524).As<int*>() = 5;
-							*ScriptLocal(thread, 31525).As<int*>() = 3;
+							*ScriptLocal(thread, 32750).As<int*>() = 5;
+							*ScriptLocal(thread, 32751).As<int*>() = 3;
 							break;
 						case 2:
 						case 4:
-							*ScriptLocal(thread, 31499).As<int*>() = 7;
+							*ScriptLocal(thread, 32725).As<int*>() = 7;
 							break;
 						default: break;
 						}
@@ -292,8 +292,8 @@ namespace YimMenu::Features
 					Scripts::ForceScriptHost(thread);
 					ScriptMgr::Yield(500ms);
 
-					*ScriptLocal(thread, 54763).As<int*>() = 9;
-					*ScriptLocal(thread, 54763).At(1776).At(0, 1).As<int*>() = 50;
+					*ScriptLocal(thread, 56504).As<int*>() = 9;
+					*ScriptLocal(thread, 56504).At(1776).At(0, 1).As<int*>() = 50;
 				}
 			}
 		};

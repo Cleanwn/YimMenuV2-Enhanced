@@ -57,16 +57,17 @@ struct RANDOM_EVENTS_TARGET_DATA
 {
 	PLAYER_INDEX PhantomCarTarget; // 0
 	PLAYER_INDEX XMASMuggerTarget; // 1
+	PLAYER_INDEX CommunityOutreachTarget; // 2
 };
-static_assert(sizeof(RANDOM_EVENTS_TARGET_DATA) == 2 * 8);
+static_assert(sizeof(RANDOM_EVENTS_TARGET_DATA) == 3 * 8);
 
 struct GSBD_RandomEvents
 {
 	alignas(8) eRandomEventInitState InitState;      // 0
-	SCR_ARRAY<RANDOM_EVENTS_DATA, 21> EventData;     // 1
-	RANDOM_EVENTS_VEHICLE_LIST_DATA VehicleListData; // 317
-	RANDOM_EVENTS_TARGET_DATA TargetData;            // 319
+	SCR_ARRAY<RANDOM_EVENTS_DATA, 24> EventData;     // 1
+	RANDOM_EVENTS_VEHICLE_LIST_DATA VehicleListData; // 362
+	RANDOM_EVENTS_TARGET_DATA TargetData;            // 364
 
 	static GSBD_RandomEvents* Get();
 };
-static_assert(sizeof(GSBD_RandomEvents) == 321 * 8);
+static_assert(sizeof(GSBD_RandomEvents) == 367 * 8);

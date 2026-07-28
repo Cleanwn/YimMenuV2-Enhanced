@@ -14,6 +14,7 @@ namespace YimMenu::Features
 		{0, "Classic"},
 		{1, "Modern"},
 		{2, "Modern (Vertical)"},
+	    {3, "Modern (Modular)"},
 	};
 
 	// Expose as global reference so other code can use it
@@ -33,6 +34,14 @@ namespace YimMenu
 			m_ActiveSubmenu = submenu;
 
 		m_Submenus.push_back(std::move(submenu));
+	}
+
+	void UIManager::RemoveSubmenuImpl(const std::shared_ptr<Submenu>& submenu)
+	{
+		std::erase(m_Submenus, submenu);
+
+		if (m_ActiveSubmenu == submenu)
+			m_ActiveSubmenu = m_Submenus.empty() ? nullptr : m_Submenus.front();
 	}
 
 	void UIManager::SetActiveSubmenuImpl(const std::shared_ptr<Submenu> submenu)
@@ -55,6 +64,9 @@ namespace YimMenu
 			break;
 		case UITheme::ModernV:
 			RenderModernVTheme();
+			break;
+		case UITheme::Modular:
+			RenderModularTheme();
 			break;
 		default:
 			RenderClassicTheme(); // Default theme

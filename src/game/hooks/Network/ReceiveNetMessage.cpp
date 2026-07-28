@@ -4,6 +4,7 @@
 #include "common.hpp"
 
 #include "core/hooking/DetourHook.hpp"
+#include "core/scripting/LuaManager.hpp"
 #include "game/backend/AnticheatBypass.hpp"
 #include "game/backend/Players.hpp"
 #include "game/frontend/ChatDisplay.hpp"
@@ -49,6 +50,14 @@ namespace YimMenu::Hooks
 			{
 				char msg[256]{};
 				buffer.ReadString(msg, sizeof(msg)); // we don't need the rest
+
+				if (!LuaManager::DispatchEvent(MenuEvent::ChatMessageReceived, [player, msg](lua_State* state){
+					lua_pushinteger(state, player.GetId());
+					lua_pushstring(state, msg);
+					return 2;
+				}))
+					return;
+
 				ChatDisplay::Show(player.GetName(), msg, ImGui::Colors::LightBlue);
 			}
 			return; // the game doesn't handle that anyway

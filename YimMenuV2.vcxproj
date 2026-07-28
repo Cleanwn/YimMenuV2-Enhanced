@@ -32,22 +32,24 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)bin\int\$(ProjectName)\</IntDir>
+    <TargetName>YimMenuV2</TargetName>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>common.hpp</PrecompiledHeaderFile>
-      <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;NOMINMAX;IMGUI_DEFINE_MATH_OPERATORS;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)include\json-src\single_include;$(SolutionDir)include\imgui-src;$(SolutionDir)include\minhook-src\src\hde;$(SolutionDir)include\minhook-src\include;$(SolutionDir)include\asynclogger-src\src;$(SolutionDir)include\asynclogger-src\include;$(SolutionDir)include\fmtlib-src\include;$(SolutionDir)include\luajit-src\src;$(SolutionDir)include\luajit-build\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>common.hpp</ForcedIncludeFiles>
-      <DebugInformationFormat>None</DebugInformationFormat>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <UseFullPaths>false</UseFullPaths>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -113,6 +115,7 @@
     <ClInclude Include="src\core\memory\PointerCalculator.hpp" />
     <ClInclude Include="src\core\renderer\Renderer.hpp" />
     <ClInclude Include="src\core\scripting\LatentFunction.hpp" />
+    <ClInclude Include="src\core\scripting\LuaCommands.hpp" />
     <ClInclude Include="src\core\scripting\LuaConfig.hpp" />
     <ClInclude Include="src\core\scripting\LuaLibrary.hpp" />
     <ClInclude Include="src\core\scripting\LuaManager.hpp" />
@@ -120,6 +123,7 @@
     <ClInclude Include="src\core\scripting\LuaScript.hpp" />
     <ClInclude Include="src\core\scripting\LuaUserInterface.hpp" />
     <ClInclude Include="src\core\scripting\LuaUtils.hpp" />
+    <ClInclude Include="src\core\scripting\libraries\LuaCommandHandle.hpp" />
     <ClInclude Include="src\core\settings\IStateSerializer.hpp" />
     <ClInclude Include="src\core\settings\Settings.hpp" />
     <ClInclude Include="src\core\util\Joaat.hpp" />
@@ -179,6 +183,7 @@
     <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\CayoPericoHeist.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\DiamondCasinoHeist.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\DoomsdayHeist.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\KortzCenterHeist.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\HeistModifier.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\StatEditor.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Recovery\Transactions.hpp" />
@@ -186,6 +191,7 @@
     <ClInclude Include="src\game\frontend\submenus\Self\OutfitEditor.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Self\Weapons.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Settings.hpp" />
+    <ClInclude Include="src\game\frontend\submenus\Settings\GUISettings.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Settings\LuaScripts.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Teleport.hpp" />
     <ClInclude Include="src\game\frontend\submenus\Vehicle.hpp" />
@@ -245,6 +251,7 @@
     <ClInclude Include="src\types\network\CNetworkPlayerMgr.hpp" />
     <ClInclude Include="src\types\network\MatchmakingAttributes.hpp" />
     <ClInclude Include="src\types\network\MatchmakingId.hpp" />
+    <ClInclude Include="src\types\network\PlatformAccountId.hpp" />
     <ClInclude Include="src\types\network\netAddress.hpp" />
     <ClInclude Include="src\types\network\netArrayHandler.hpp" />
     <ClInclude Include="src\types\network\netArrayHandlerBase.hpp" />
@@ -444,6 +451,8 @@
     <ClCompile Include="src\core\frontend\manager\styles\Classic\Classic.cpp" />
     <ClCompile Include="src\core\frontend\manager\styles\Modern\Modern.cpp" />
     <ClCompile Include="src\core\frontend\manager\styles\ModernVertical\ModernVertical.cpp" />
+    <ClCompile Include="src\core\frontend\manager\styles\Modular\Modular.cpp" />
+    <ClCompile Include="src\core\frontend\manager\styles\Themes.cpp" />
     <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle.cpp" />
     <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle_palette.cpp" />
     <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle_presets.cpp" />
@@ -462,16 +471,25 @@
     <ClCompile Include="src\core\memory\PatternScanner.cpp" />
     <ClCompile Include="src\core\renderer\Renderer.cpp" />
     <ClCompile Include="src\core\scripting\LatentFunction.cpp" />
+    <ClCompile Include="src\core\scripting\LuaCommands.cpp" />
     <ClCompile Include="src\core\scripting\LuaConfig.cpp" />
     <ClCompile Include="src\core\scripting\LuaLibrary.cpp" />
     <ClCompile Include="src\core\scripting\LuaManager.cpp" />
     <ClCompile Include="src\core\scripting\LuaResource.cpp" />
     <ClCompile Include="src\core\scripting\LuaScript.cpp" />
     <ClCompile Include="src\core\scripting\LuaUserInterface.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\CommandMgr.cpp" />
     <ClCompile Include="src\core\scripting\libraries\Default.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\FileMgr.cpp">
+      <ObjectFileName>$(IntDir)\FileMgr1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\ImGui.cpp" />
     <ClCompile Include="src\core\scripting\libraries\Internal.cpp" />
     <ClCompile Include="src\core\scripting\libraries\Logging.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Memory.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Menu.cpp" />
     <ClCompile Include="src\core\scripting\libraries\Notify.cpp" />
+    <ClCompile Include="src\core\scripting\libraries\Pointer.cpp" />
     <ClCompile Include="src\core\scripting\libraries\Script.cpp" />
     <ClCompile Include="src\core\scripting\libraries\Util.cpp" />
     <ClCompile Include="src\core\scripting\libraries\Vector3.cpp" />
@@ -504,6 +522,7 @@
     <ClCompile Include="src\game\features\network\PauseGame.cpp" />
     <ClCompile Include="src\game\features\network\SilencePhonecalls.cpp" />
     <ClCompile Include="src\game\features\network\SpamKillfeed.cpp" />
+    <ClCompile Include="src\game\features\network\SpoofDataHash.cpp" />
     <ClCompile Include="src\game\features\network\SpoofMatchmakingRegion.cpp" />
     <ClCompile Include="src\game\features\players\info\Spectate.cpp" />
     <ClCompile Include="src\game\features\players\kick\FreemodeStateKick.cpp" />
@@ -518,10 +537,8 @@
     <ClCompile Include="src\game\features\players\toxic\Blackscreen.cpp" />
     <ClCompile Include="src\game\features\players\toxic\CeoKick.cpp" />
     <ClCompile Include="src\game\features\players\toxic\Explode.cpp" />
-    <ClCompile Include="src\game\features\players\toxic\Forcefield.cpp" />
     <ClCompile Include="src\game\features\players\toxic\Kill.cpp" />
     <ClCompile Include="src\game\features\players\toxic\KillLoopExploit.cpp" />
-    <ClCompile Include="src\game\features\players\toxic\Magnet.cpp" />
     <ClCompile Include="src\game\features\players\troll\DeleteVehicle.cpp" />
     <ClCompile Include="src\game\features\players\troll\GivePlayerAllWeapon.cpp" />
     <ClCompile Include="src\game\features\players\troll\SendGooch.cpp" />
@@ -530,7 +547,6 @@
     <ClCompile Include="src\game\features\players\troll\SetBounty.cpp" />
     <ClCompile Include="src\game\features\recovery\AllowGenderChange.cpp" />
     <ClCompile Include="src\game\features\recovery\Casino.cpp" />
-    <ClCompile Include="src\game\features\recovery\CharacterSkills.cpp" />
     <ClCompile Include="src\game\features\recovery\ClaimSafeEarnings.cpp" />
     <ClCompile Include="src\game\features\recovery\DailyActivities.cpp" />
     <ClCompile Include="src\game\features\recovery\FreeChangeAppearance.cpp" />
@@ -538,9 +554,9 @@
     <ClCompile Include="src\game\features\recovery\Heist\CayoPericoHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\DiamondCasinoHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\Heist\DoomsdayHeist.cpp" />
+    <ClCompile Include="src\game\features\recovery\Heist\KortzCenterHeist.cpp" />
     <ClCompile Include="src\game\features\recovery\NoChangeAppearanceCooldown.cpp" />
     <ClCompile Include="src\game\features\recovery\PlayAllMissionsSolo.cpp" />
-    <ClCompile Include="src\game\features\recovery\RPModifier.cpp" />
     <ClCompile Include="src\game\features\recovery\RpMultiplier.cpp" />
     <ClCompile Include="src\game\features\recovery\UnlockGTAPlus.cpp" />
     <ClCompile Include="src\game\features\self\Aimbot.cpp" />
@@ -624,7 +640,9 @@
     <ClCompile Include="src\game\frontend\ChatDisplay.cpp" />
     <ClCompile Include="src\game\frontend\ESP.cpp" />
     <ClCompile Include="src\game\frontend\GUI.cpp" />
-    <ClCompile Include="src\game\frontend\Menu.cpp" />
+    <ClCompile Include="src\game\frontend\Menu.cpp">
+      <ObjectFileName>$(IntDir)\Menu1.obj</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="src\game\frontend\Onboarding.cpp" />
     <ClCompile Include="src\game\frontend\Overlay.cpp" />
     <ClCompile Include="src\game\frontend\fonts\IconFont.cpp" />
@@ -681,6 +699,9 @@
     <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\DoomsdayHeist.cpp">
       <ObjectFileName>$(IntDir)\DoomsdayHeist1.obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\KortzCenterHeist.cpp">
+      <ObjectFileName>$(IntDir)\KortzCenterHeist1.obj</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Recovery\HeistModifier.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Recovery\StatEditor.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Recovery\Transactions.cpp" />
@@ -692,6 +713,7 @@
     <ClCompile Include="src\game\frontend\submenus\Settings.cpp">
       <ObjectFileName>$(IntDir)\Settings1.obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Settings\GUISettings.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Settings\LuaScripts.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Teleport.cpp" />
     <ClCompile Include="src\game\frontend\submenus\Vehicle.cpp" />
@@ -728,6 +750,7 @@
     <ClCompile Include="src\game\gta\VehicleModel.cpp" />
     <ClCompile Include="src\game\gta\invoker\Invoker.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\BattlEyeServerProcessPlayerJoin.cpp" />
+    <ClCompile Include="src\game\hooks\Anticheat\GameSkeletonUpdate.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash2.cpp" />
     <ClCompile Include="src\game\hooks\Anticheat\GetThreadContext.cpp" />
@@ -755,9 +778,11 @@
     <ClCompile Include="src\game\hooks\Spoofing\WriteNodeData.cpp" />
     <ClCompile Include="src\game\hooks\Spoofing\WriteSyncTree.cpp" />
     <ClCompile Include="src\game\pointers\Pointers.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\Entities.cpp" />
     <ClCompile Include="src\game\scripting\libraries\Entity.cpp">
       <ObjectFileName>$(IntDir)\Entity1.obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Event.cpp" />
     <ClCompile Include="src\game\scripting\libraries\Invoker.cpp">
       <ObjectFileName>$(IntDir)\Invoker1.obj</ObjectFileName>
     </ClCompile>
@@ -769,8 +794,24 @@
     <ClCompile Include="src\game\scripting\libraries\Ped.cpp">
       <ObjectFileName>$(IntDir)\Ped1.obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Player.cpp">
+      <ObjectFileName>$(IntDir)\Player1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\ScriptFunction.cpp">
+      <ObjectFileName>$(IntDir)\ScriptFunction1.obj</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="src\game\scripting\libraries\ScriptGlobal.cpp">
       <ObjectFileName>$(IntDir)\ScriptGlobal1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\ScriptLocal.cpp">
+      <ObjectFileName>$(IntDir)\ScriptLocal1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\ScriptPatch.cpp" />
+    <ClCompile Include="src\game\scripting\libraries\ScriptPointer.cpp">
+      <ObjectFileName>$(IntDir)\ScriptPointer1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Scripts.cpp">
+      <ObjectFileName>$(IntDir)\Scripts2.obj</ObjectFileName>
     </ClCompile>
     <ClCompile Include="src\game\scripting\libraries\Stats.cpp">
       <ObjectFileName>$(IntDir)\Stats1.obj</ObjectFileName>

@@ -6,11 +6,14 @@
 #include "game/pointers/Pointers.hpp"
 #include "game/frontend/Menu.hpp"
 #include "core/frontend/manager/UIManager.hpp"
+#include "game/frontend/submenus/Settings/GUISettings.hpp"
 
 namespace YimMenu
 {
 	void RenderClassicTheme()
 	{
+		YimMenu::SyncColorCommandsToStyle();
+
 		float windowWidth = *YimMenu::Pointers.ScreenResX / 2.5f;
 		float centerX = (*YimMenu::Pointers.ScreenResX - windowWidth) / 2.0f;
 		float centerY = *YimMenu::Pointers.ScreenResY / 5.0f;
@@ -19,7 +22,7 @@ namespace YimMenu
 		ImGui::SetNextWindowSize(windowSize, ImGuiCond_FirstUseEver);
 		ImGui::SetNextWindowPos(ImVec2(centerX, centerY), ImGuiCond_FirstUseEver);
 
-		ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse;
+		ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoCollapse;
 		auto pos = ImGui::GetCursorPos();
 		if(ImGui::Begin("##ClassicInputWindow", nullptr, flags))
 		{
@@ -39,12 +42,12 @@ namespace YimMenu
 			}
 			ImGui::EndChild();
 
-			ImGui::Text("ChronixV2");
+			ImGui::Text("YimMenuV2");
 
 			pos.y -= 28;
 			ImGui::SetCursorPos(ImVec2(pos.x + 130, pos.y));
 
-			if (ImGui::BeginChild("##minisubmenus", ImVec2(0, 50), true, ImGuiWindowFlags_NoScrollbar))
+			if (ImGui::BeginChild("##minisubmenus", ImVec2(0, 50), true, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse))
 			{
 				auto activeSubmenu = YimMenu::UIManager::GetActiveSubmenu();
 				if (activeSubmenu)

@@ -11,9 +11,9 @@
 
 namespace YimMenu
 {
-	Group::Group(const std::string& name, int items_per_row) :
+	Group::Group(const std::string& name, int items_per_column) :
 	    m_Name(name),
-	    m_ItemsPerRow(items_per_row)
+	    m_ItemsPerColumn(items_per_column)
 	{
 	}
 
@@ -39,7 +39,7 @@ namespace YimMenu
 			item->Draw();
 			item_count++;
 
-			if (m_ItemsPerRow != -1 && item_count % m_ItemsPerRow == 0)
+			if (m_ItemsPerColumn != -1 && item_count % m_ItemsPerColumn == 0)
 			{
 				ImGui::EndGroup();
 				ImGui::SameLine();

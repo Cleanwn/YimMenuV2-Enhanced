@@ -8,7 +8,6 @@
 #include "game/gta/invoker/Invoker.hpp"
 
 #include "types/script/scrProgram.hpp"
-#include "types/script/scrThread.hpp"
 
 
 namespace YimMenu

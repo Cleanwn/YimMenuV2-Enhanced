@@ -12,6 +12,7 @@
 #include "game/frontend/items/Items.hpp"
 #include "game/frontend/items/DrawHotkey.hpp"
 #include "game/frontend/submenus/Settings/LuaScripts.hpp"
+#include "game/frontend/submenus/Settings/GUISettings.hpp"
 
 namespace YimMenu::Submenus
 {
@@ -40,6 +41,8 @@ namespace YimMenu::Submenus
 
 		for (auto& [name, link] : sortedCommands)
 		{
+			if (name.empty())
+				continue;
 			DrawHotkey(link, name);
 		}
 	};
@@ -101,7 +104,7 @@ namespace YimMenu::Submenus
 		overlay->AddItem(std::make_shared<BoolCommandItem>("overlay"_J));
 		overlay->AddItem(std::make_shared<ConditionalItem>("overlay"_J, std::make_shared<BoolCommandItem>("overlayfps"_J)));
 
-		chat->AddItem(std::make_shared<BoolCommandItem>("clearchat"_J));
+		chat->AddItem(std::make_shared<CommandItem>("clearchat"_J));
 
 		game->AddItem(playerEsp);
 		game->AddItem(pedEsp);
@@ -114,6 +117,7 @@ namespace YimMenu::Submenus
 		AddCategory(std::move(hotkeys));
 		AddCategory(std::move(gui));
 		AddCategory(std::move(game));
+		AddCategory(DrawGUISettingsMenu());
 		AddCategory(BuildLuaScriptsMenu());
 	}
 }

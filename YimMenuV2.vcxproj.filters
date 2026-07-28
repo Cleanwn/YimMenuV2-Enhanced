@@ -31,6 +31,9 @@
     <Filter Include="core\frontend\manager\styles\ModernVertical">
       <UniqueIdentifier>{88AF8CD8-F414-205F-7DED-C137E95115CE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\frontend\manager\styles\Modular">
+      <UniqueIdentifier>{DD321D24-C919-DF1B-726A-45395E305882}</UniqueIdentifier>
+    </Filter>
     <Filter Include="core\frontend\widgets">
       <UniqueIdentifier>{C348C96E-2FB5-8469-F8A8-1CC764D4A6D1}</UniqueIdentifier>
     </Filter>
@@ -469,6 +472,9 @@
     <ClInclude Include="src\core\scripting\LatentFunction.hpp">
       <Filter>core\scripting</Filter>
     </ClInclude>
+    <ClInclude Include="src\core\scripting\LuaCommands.hpp">
+      <Filter>core\scripting</Filter>
+    </ClInclude>
     <ClInclude Include="src\core\scripting\LuaConfig.hpp">
       <Filter>core\scripting</Filter>
     </ClInclude>
@@ -489,6 +495,9 @@
     </ClInclude>
     <ClInclude Include="src\core\scripting\LuaUtils.hpp">
       <Filter>core\scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\scripting\libraries\LuaCommandHandle.hpp">
+      <Filter>core\scripting\libraries</Filter>
     </ClInclude>
     <ClInclude Include="src\core\settings\IStateSerializer.hpp">
       <Filter>core\settings</Filter>
@@ -667,6 +676,9 @@
     <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\DoomsdayHeist.hpp">
       <Filter>game\frontend\submenus\Recovery\Heist</Filter>
     </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Recovery\Heist\KortzCenterHeist.hpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClInclude>
     <ClInclude Include="src\game\frontend\submenus\Recovery\HeistModifier.hpp">
       <Filter>game\frontend\submenus\Recovery</Filter>
     </ClInclude>
@@ -687,6 +699,9 @@
     </ClInclude>
     <ClInclude Include="src\game\frontend\submenus\Settings.hpp">
       <Filter>game\frontend\submenus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\frontend\submenus\Settings\GUISettings.hpp">
+      <Filter>game\frontend\submenus\Settings</Filter>
     </ClInclude>
     <ClInclude Include="src\game\frontend\submenus\Settings\LuaScripts.hpp">
       <Filter>game\frontend\submenus\Settings</Filter>
@@ -863,6 +878,9 @@
       <Filter>types\network</Filter>
     </ClInclude>
     <ClInclude Include="src\types\network\MatchmakingId.hpp">
+      <Filter>types\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types\network\PlatformAccountId.hpp">
       <Filter>types\network</Filter>
     </ClInclude>
     <ClInclude Include="src\types\network\netAddress.hpp">
@@ -1450,6 +1468,12 @@
     <ClCompile Include="src\core\frontend\manager\styles\ModernVertical\ModernVertical.cpp">
       <Filter>core\frontend\manager\styles\ModernVertical</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\frontend\manager\styles\Modular\Modular.cpp">
+      <Filter>core\frontend\manager\styles\Modular</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\frontend\manager\styles\Themes.cpp">
+      <Filter>core\frontend\manager\styles</Filter>
+    </ClCompile>
     <ClCompile Include="src\core\frontend\widgets\toggle\imgui_toggle.cpp">
       <Filter>core\frontend\widgets\toggle</Filter>
     </ClCompile>
@@ -1504,6 +1528,9 @@
     <ClCompile Include="src\core\scripting\LatentFunction.cpp">
       <Filter>core\scripting</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\scripting\LuaCommands.cpp">
+      <Filter>core\scripting</Filter>
+    </ClCompile>
     <ClCompile Include="src\core\scripting\LuaConfig.cpp">
       <Filter>core\scripting</Filter>
     </ClCompile>
@@ -1522,7 +1549,16 @@
     <ClCompile Include="src\core\scripting\LuaUserInterface.cpp">
       <Filter>core\scripting</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\CommandMgr.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
     <ClCompile Include="src\core\scripting\libraries\Default.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\FileMgr.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\ImGui.cpp">
       <Filter>core\scripting\libraries</Filter>
     </ClCompile>
     <ClCompile Include="src\core\scripting\libraries\Internal.cpp">
@@ -1531,7 +1567,16 @@
     <ClCompile Include="src\core\scripting\libraries\Logging.cpp">
       <Filter>core\scripting\libraries</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Memory.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Menu.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
     <ClCompile Include="src\core\scripting\libraries\Notify.cpp">
+      <Filter>core\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scripting\libraries\Pointer.cpp">
       <Filter>core\scripting\libraries</Filter>
     </ClCompile>
     <ClCompile Include="src\core\scripting\libraries\Script.cpp">
@@ -1630,6 +1675,9 @@
     <ClCompile Include="src\game\features\network\SpamKillfeed.cpp">
       <Filter>game\features\network</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\features\network\SpoofDataHash.cpp">
+      <Filter>game\features\network</Filter>
+    </ClCompile>
     <ClCompile Include="src\game\features\network\SpoofMatchmakingRegion.cpp">
       <Filter>game\features\network</Filter>
     </ClCompile>
@@ -1672,16 +1720,10 @@
     <ClCompile Include="src\game\features\players\toxic\Explode.cpp">
       <Filter>game\features\players\toxic</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\features\players\toxic\Forcefield.cpp">
-      <Filter>game\features\players\toxic</Filter>
-    </ClCompile>
     <ClCompile Include="src\game\features\players\toxic\Kill.cpp">
       <Filter>game\features\players\toxic</Filter>
     </ClCompile>
     <ClCompile Include="src\game\features\players\toxic\KillLoopExploit.cpp">
-      <Filter>game\features\players\toxic</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\players\toxic\Magnet.cpp">
       <Filter>game\features\players\toxic</Filter>
     </ClCompile>
     <ClCompile Include="src\game\features\players\troll\DeleteVehicle.cpp">
@@ -1708,9 +1750,6 @@
     <ClCompile Include="src\game\features\recovery\Casino.cpp">
       <Filter>game\features\recovery</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\features\recovery\CharacterSkills.cpp">
-      <Filter>game\features\recovery</Filter>
-    </ClCompile>
     <ClCompile Include="src\game\features\recovery\ClaimSafeEarnings.cpp">
       <Filter>game\features\recovery</Filter>
     </ClCompile>
@@ -1732,13 +1771,13 @@
     <ClCompile Include="src\game\features\recovery\Heist\DoomsdayHeist.cpp">
       <Filter>game\features\recovery\Heist</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\features\recovery\Heist\KortzCenterHeist.cpp">
+      <Filter>game\features\recovery\Heist</Filter>
+    </ClCompile>
     <ClCompile Include="src\game\features\recovery\NoChangeAppearanceCooldown.cpp">
       <Filter>game\features\recovery</Filter>
     </ClCompile>
     <ClCompile Include="src\game\features\recovery\PlayAllMissionsSolo.cpp">
-      <Filter>game\features\recovery</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\features\recovery\RPModifier.cpp">
       <Filter>game\features\recovery</Filter>
     </ClCompile>
     <ClCompile Include="src\game\features\recovery\RpMultiplier.cpp">
@@ -2101,6 +2140,9 @@
     <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\DoomsdayHeist.cpp">
       <Filter>game\frontend\submenus\Recovery\Heist</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Recovery\Heist\KortzCenterHeist.cpp">
+      <Filter>game\frontend\submenus\Recovery\Heist</Filter>
+    </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Recovery\HeistModifier.cpp">
       <Filter>game\frontend\submenus\Recovery</Filter>
     </ClCompile>
@@ -2121,6 +2163,9 @@
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Settings.cpp">
       <Filter>game\frontend\submenus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\frontend\submenus\Settings\GUISettings.cpp">
+      <Filter>game\frontend\submenus\Settings</Filter>
     </ClCompile>
     <ClCompile Include="src\game\frontend\submenus\Settings\LuaScripts.cpp">
       <Filter>game\frontend\submenus\Settings</Filter>
@@ -2206,6 +2251,9 @@
     <ClCompile Include="src\game\hooks\Anticheat\BattlEyeServerProcessPlayerJoin.cpp">
       <Filter>game\hooks\Anticheat</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\hooks\Anticheat\GameSkeletonUpdate.cpp">
+      <Filter>game\hooks\Anticheat</Filter>
+    </ClCompile>
     <ClCompile Include="src\game\hooks\Anticheat\GetAnticheatInitializedHash.cpp">
       <Filter>game\hooks\Anticheat</Filter>
     </ClCompile>
@@ -2287,7 +2335,13 @@
     <ClCompile Include="src\game\pointers\Pointers.cpp">
       <Filter>game\pointers</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Entities.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
     <ClCompile Include="src\game\scripting\libraries\Entity.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Event.cpp">
       <Filter>game\scripting\libraries</Filter>
     </ClCompile>
     <ClCompile Include="src\game\scripting\libraries\Invoker.cpp">
@@ -2305,7 +2359,25 @@
     <ClCompile Include="src\game\scripting\libraries\Ped.cpp">
       <Filter>game\scripting\libraries</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Player.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\ScriptFunction.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
     <ClCompile Include="src\game\scripting\libraries\ScriptGlobal.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\ScriptLocal.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\ScriptPatch.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\ScriptPointer.cpp">
+      <Filter>game\scripting\libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\scripting\libraries\Scripts.cpp">
       <Filter>game\scripting\libraries</Filter>
     </ClCompile>
     <ClCompile Include="src\game\scripting\libraries\Stats.cpp">

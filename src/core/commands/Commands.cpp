@@ -5,6 +5,7 @@
 
 #include "Commands.hpp"
 #include "Command.hpp"
+#include "BoolCommand.hpp"
 #include "LoopedCommand.hpp"
 #include "core/backend/ScriptMgr.hpp"
 
@@ -40,6 +41,17 @@ namespace YimMenu
 		m_LoopedCommands.push_back(command);
 	}
 
+	void Commands::RemoveCommandImpl(Command* command)
+	{
+		if (!command)
+			return;
+
+		m_Commands.erase(command->GetHash());
+		
+		std::erase(m_BoolCommands, dynamic_cast<BoolCommand*>(command));
+		std::erase(m_LoopedCommands, dynamic_cast<LoopedCommand*>(command));
+	}
+
 	void Commands::EnableBoolCommandsImpl()
 	{
 		for (auto& command : m_BoolCommands)
@@ -65,6 +77,9 @@ namespace YimMenu
 	{
 		for (auto& command : m_Commands)
 		{
+			if (!command.second->ShouldSaveState())
+				continue;
+
 			if (!state.contains(command.second->GetName()))
 				state[command.second->GetName()] = nlohmann::json::object();
 
@@ -76,6 +91,9 @@ namespace YimMenu
 	{
 		for (auto& command : m_Commands)
 		{
+			if (!command.second->ShouldSaveState())
+				continue;
+
 			if (state.contains(command.second->GetName()))
 				command.second->LoadState(state[command.second->GetName()]);
 		}
