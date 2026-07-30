@@ -538,6 +538,9 @@
     <ClInclude Include="src\game\backend\NodeHooks.hpp">
       <Filter>game\backend</Filter>
     </ClInclude>
+    <ClInclude Include="src\game\backend\Outfit.hpp">
+      <Filter>game\backend</Filter>
+    </ClInclude>
     <ClInclude Include="src\game\backend\PersonalVehicles.hpp">
       <Filter>game\backend</Filter>
     </ClInclude>
@@ -1606,6 +1609,9 @@
     <ClCompile Include="src\game\backend\NodeHooks.cpp">
       <Filter>game\backend</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\backend\Outfit.cpp">
+      <Filter>game\backend</Filter>
+    </ClCompile>
     <ClCompile Include="src\game\backend\PersonalVehicles.cpp">
       <Filter>game\backend</Filter>
     </ClCompile>
@@ -2271,6 +2277,9 @@
     </ClCompile>
     <ClCompile Include="src\game\hooks\Anticheat\QueueDependency.cpp">
       <Filter>game\hooks\Anticheat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hooks\GUI\RawInput.cpp">
+      <Filter>game\hooks\GUI</Filter>
     </ClCompile>
     <ClCompile Include="src\game\hooks\GUI\SwapChain.cpp">
       <Filter>game\hooks\GUI</Filter>

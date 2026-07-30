@@ -260,7 +260,7 @@ namespace YimMenu
 		}
 
 		auto coro_handle = luaL_ref(m_State, LUA_REGISTRYINDEX);
-		lua_pop(m_State, 1); // pop the original fn ¡ª nothing else owns it here
+		lua_pop(m_State, 1); // pop the original fn â€” nothing else owns it here
 
 		ScriptCallback callback;
 		callback.m_Coroutine = coro_handle;

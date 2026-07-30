@@ -1685,7 +1685,7 @@ namespace YimMenu::Lua
 				lua_pushboolean(state, ImGui::BeginListBox(label, ImVec2(sx, sy)));
 				return 1;
 			}
-			// (label, items_count, height?) form ¡ª approximate height based on text line height
+			// (label, items_count, height?) form â€” approximate height based on text line height
 			int items_count     = (int)luaL_checkinteger(state, 2);
 			int height_in_items = (int)luaL_optinteger(state, 3, -1);
 			if (height_in_items < 0)
